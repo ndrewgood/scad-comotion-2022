@@ -1,0 +1,27 @@
+.nav-container {
+    // max-width: 1000px;
+    width: 100vw;
+    height: 80px;
+    background-color: rgb(212, 212, 212);
+    position: sticky;
+    z-index: 100;
+
+    margin: auto;
+    top: 0px;
+
+    padding: 0 50px;
+    display: flex;
+
+    a, .nav-right {
+        margin: auto;
+    }
+}
+
+.nav-right {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    a {
+        margin: 0;
+    }
+}

@@ -4,11 +4,31 @@ import * as React from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Nav from "../components/nav"
+import Hero from '../components/hero'
+import Schedule from "../components/schedule"
+import CtaGrid from "../components/ctaGrid"
+import Footer from '../components/footer'
+
+import '../styles/global.scss'
+import '../styles/index.scss'
+import '../styles/nav.scss'
+
+const Description = () => (
+  <main className="description-container">
+    <p>description</p>
+  </main>
+)
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <h1>Hello World</h1>
+    <Hero />
+    <Nav context="nav-index"/>
+    <Description />
+    <Schedule />
+    <CtaGrid />
+    <Footer />
   </Layout>
 )
 

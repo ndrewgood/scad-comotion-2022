@@ -1,0 +1,11 @@
+.hero-container {
+    width: 100vw;
+    height: calc(100vh - 80px);
+    background-color: rgb(185, 185, 185);
+    display: flex;
+    text-align: center;
+    p {
+        margin: auto;
+    }
+
+}

@@ -1,0 +1,24 @@
+.ctaGrid-container {
+    width: 100vw;
+    height: 400px;
+    background-color: rgb(173, 136, 136);
+    display: flex;
+}
+
+.cta-container {
+    width: 50vw;
+    display: flex;
+    text-align: center;
+    p {
+        margin: auto;
+    }
+}
+
+.cta1 {
+    background-color: rgb(180, 180, 180);
+}
+
+
+.cta2 {
+    background-color: rgb(109, 109, 109);
+}
