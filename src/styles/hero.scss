@@ -15,8 +15,9 @@ $nav-height: 80px;
       top: 50%;
       left: 50%;
       margin: auto;
-      font-size: 60px;
+      font-size: 40px;
       font-family: Arial, Helvetica, sans-serif;
+      opacity: .4;
       z-index: 100;
       transition: 1.3s;
       transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */

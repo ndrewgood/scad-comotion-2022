@@ -1,10 +1,30 @@
+@use 'global';
+
+// DESCRIPTION
+
 .description-container {
     width: 100%;
     background-color: rgb(119, 119, 119);
-    height: 450px;
+    height: 400px;
     display: flex;
     text-align: center;
+    background-image: url(../assets/svg/description/desc_bg.svg);
+    display: flex;
+    flex-direction: column;
+    position: relative;
     p {
         margin: auto;
+        color: global.$tan;
+        max-width: 530px;
+        font-size: 1.4rem;
+   
+
+    }
+    .description-dots {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/svg/description/desc_dots.svg);
+    background-position: center;
     }
 }

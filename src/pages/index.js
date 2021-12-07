@@ -16,7 +16,9 @@ import '../styles/nav.scss'
 
 const Description = () => (
   <main className="description-container">
-    <p>description</p>
+    <div className="description-dots"></div>
+    <p>CoMotion is a student-led motion graphics conference at the Savannah College of Art and Design.
+    <br/><br/>It is being held remotely on March 18th - 20th, 2021.</p>
   </main>
 )
 
