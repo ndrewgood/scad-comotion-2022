@@ -2,7 +2,7 @@
     // max-width: 1000px;
     // width: 100vw;
     height: 80px;
-    background-color: rgb(212, 212, 212);
+    background-color: #f4eedd;
     position: sticky;
     z-index: 100;
 
@@ -19,7 +19,7 @@
 
 .nav-right {
     //width: 300px;
-    background-color: #333;
+    background-color: #d6d2c1;
     display: flex;
     flex-direction: row;
     perspective: 200px;
@@ -37,10 +37,23 @@
     transform-style: preserve-3d;
     transform: translateZ(-40px);
     transition: 300ms all ease-in;
+    color: #291f39;
 
     &:hover {
-        transform: translateZ( -40px) rotateX(-90deg);
+        transform: translateZ( -80px) rotateX(-90deg);
         transition: 300ms all ease-in;
+    }
+
+    &.pattern-1 {
+        .box__face--top  { background: #ff8937; }
+    }
+
+    &.pattern-2 {
+        .box__face--top  { background: #b0f1bf; }
+    }
+
+    &.pattern-3 {
+        .box__face--top  { background: #ebaff0; }
     }
 }
 
@@ -91,15 +104,15 @@
 .rightWall, .leftWall {
     height: 80px;
     width: 80px;
-    background-color: rgb(212, 212, 212);
+    background-color: #ebe6d3;
 }
 
-.box__face--front  { background: hsla(  0, 100%, 50%, 1); }
-.box__face--right  { background: hsla( 60, 100%, 50%, 1); }
-.box__face--back   { background: hsla(120, 100%, 50%, 0.7); }
-.box__face--left   { background: hsla(180, 100%, 50%, 1); }
-.box__face--top    { background: hsla(240, 100%, 50%, 1); }
-.box__face--bottom { background: hsla(300, 100%, 50%, 0.7); }
+.box__face--front  { background: #f4eedd; }
+.box__face--right  { background: #ebe6d3; }
+.box__face--back   { background: #666; }
+.box__face--left   { background: #ebe6d3; }
+.box__face--top    { background: #aaa; }
+.box__face--bottom { background: #ccc; }
 
 .box__face--front  { transform: rotateY(  0deg) translateZ( 40px); }
 .box__face--back   { transform: rotateY(180deg) translateZ( 40px); }

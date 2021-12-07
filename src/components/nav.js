@@ -12,24 +12,24 @@ const Nav = ({context}) => {
                 <div className="wall">
                     <div className="leftWall"></div>
                 </div>
-                <Link className="box bring-forward" to="/">
-                    <div className="box__face box__face--front">link</div>
+                <Link className="box bring-forward pattern-1" to="/">
+                    <div className="box__face box__face--front">Schedule</div>
                     <div className="box__face box__face--back"></div>
                     <div className="box__face box__face--right"></div>
                     <div className="box__face box__face--left"></div>
                     <div className="box__face box__face--top"></div>
                     <div className="box__face box__face--bottom"></div>
                 </Link>
-                <Link className="box bring-forward" to="/">
-                    <div className="box__face box__face--front">link</div>
+                <Link className="box bring-forward pattern-2" to="/">
+                    <div className="box__face box__face--front">FAQ</div>
                     <div className="box__face box__face--back"></div>
                     <div className="box__face box__face--right"></div>
                     <div className="box__face box__face--left"></div>
                     <div className="box__face box__face--top"></div>
                     <div className="box__face box__face--bottom"></div>
                 </Link>
-                <Link className="box bring-back" to="/">
-                    <div className="box__face box__face--front">link</div>
+                <Link className="box bring-back pattern-3" to="/">
+                    <div className="box__face box__face--front">Store</div>
                     <div className="box__face box__face--back"></div>
                     <div className="box__face box__face--right"></div>
                     <div className="box__face box__face--left"></div>
