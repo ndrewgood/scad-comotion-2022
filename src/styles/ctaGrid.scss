@@ -1,24 +1,48 @@
+@use 'global';
+
 .ctaGrid-container {
     width: 100vw;
-    height: 400px;
-    background-color: rgb(173, 136, 136);
+    // height: 400px;
+    background-color: global.$tan;
     display: flex;
-}
-
-.cta-container {
-    width: 50vw;
-    display: flex;
-    text-align: center;
-    p {
-        margin: auto;
+    margin: auto;
+    justify-content: center;
+    padding: 50px 0px;
+    // Varun if you're seeing this, the above margin layout (or lack there of) is temporary. We should probably finalize on a general margin size we can use throughout the site?
+    .cta {
+        height: 300px;
+        max-width: 600px;
+        width: 90vw;
+        background-position: center;
+        border-radius: 10px;
+        transition: .3s;
+        display: flex;
+        text-decoration: none;
+        p {
+            margin: auto;
+            font-family: omnes, sans-serif;
+            color: white;
+            font-size: 2rem;
+        }
+        &:first-child {
+            margin-right: 30px;
+        }
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+    .bg1 {
+        background-image: url("../assets/svg/cta/cta1.svg");
+        &:hover {
+            box-shadow: 0px 0px 20px -2px #5e3af5cc;
+        }
+    }
+    .bg2 {
+        background-image: url("../assets/svg/cta/cta2.svg");
+        &:hover {
+            box-shadow: 0px 0px 20px -2px #60CBEE;
+        }
     }
 }
 
-.cta1 {
-    background-color: rgb(180, 180, 180);
-}
 
-
-.cta2 {
-    background-color: rgb(109, 109, 109);
-}
