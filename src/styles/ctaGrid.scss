@@ -1,48 +1,55 @@
 @use 'global';
 
-.ctaGrid-container {
+.ctaGrid {
     width: 100vw;
-    // height: 400px;
     background-color: global.$tan;
     display: flex;
     margin: auto;
     justify-content: center;
-    padding: 50px 0px;
-    // Varun if you're seeing this, the above margin layout (or lack there of) is temporary. We should probably finalize on a general margin size we can use throughout the site?
-    .cta {
-        height: 300px;
-        max-width: 600px;
+    padding: 60px 0;
+    .ctaGrid-container {
+        max-width: 1200px;
         width: 90vw;
-        background-position: center;
-        border-radius: 10px;
-        transition: .3s;
-        display: flex;
-        text-decoration: none;
-        p {
-            margin: auto;
-            font-family: omnes, sans-serif;
-            color: white;
-            font-size: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        @media only screen and (max-width: 650px) {
+            grid-template-columns: repeat(1, 1fr);
         }
-        &:first-child {
-            margin-right: 30px;
+        .cta {
+            height: 300px;
+            width: 100%;
+            background-position: center;
+            border-radius: 10px;
+            transition: .3s;
+            display: flex;
+            text-decoration: none;
+            p {
+                margin: auto;
+                font-family: omnes, sans-serif;
+                color: white;
+                font-size: 2rem;
+            }
+            &:hover {
+                transform: scale(1.02);
+            }
         }
-        &:hover {
-            transform: scale(1.02);
+        .bg1 {
+            background-image: url("../assets/svg/cta/cta1.svg");
+            &:hover {
+                box-shadow: 0px 0px 20px -2px #5e3af5cc;
+            }
+        }
+        .bg2 {
+            background-image: url("../assets/svg/cta/cta2.svg");
+            &:hover {
+                box-shadow: 0px 0px 20px -2px #60CBEE;
+            }
         }
     }
-    .bg1 {
-        background-image: url("../assets/svg/cta/cta1.svg");
-        &:hover {
-            box-shadow: 0px 0px 20px -2px #5e3af5cc;
-        }
-    }
-    .bg2 {
-        background-image: url("../assets/svg/cta/cta2.svg");
-        &:hover {
-            box-shadow: 0px 0px 20px -2px #60CBEE;
-        }
-    }
+
 }
 
 
