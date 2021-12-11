@@ -3,8 +3,7 @@ import { useMousePosition } from "../util/useMousePosition";
 import { useWindowSize } from '../util/useWindowDimensions';
 import { useScrollPosition } from "../util/useScrollPosition";
 import { v4 as uuidv4 } from 'uuid';
-
-
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import '../styles/hero.scss'
 
 import Logo from '../assets/images/still-logo.png'
@@ -15,18 +14,28 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
 
-const Hero = () => {
+const Balls = () => {
 
-    const delay = 1500;
     const shapeNum = 16
     const posLimit = 30
     const variations = ["circle1", "circle2", "circle3"]
-    
+    const duration = 300;
+
     const mouse = useMousePosition();
     const [shapeList, setShapeList] = useState([]);
     const [varList, setVarList] = useState([...variations]);
     const scroll = useScrollPosition();
     const size = useWindowSize();
+    const [inProp, setInProp] = useState(false);
+
+
+    const transitionStyles = {
+        entering: { backgroundColor: "red" },
+        entered:  { backgroundColor: "blue" },
+        exiting:  { backgroundColor: "green" },
+        exited:  { backgroundColor: "yellow" },
+    };
+      
 
     const handleMouseClick = () => {
         if(mouse.x < size.width - posLimit && mouse.x > posLimit && mouse.y > posLimit && mouse.y < size.height - posLimit) {
@@ -49,15 +58,52 @@ const Hero = () => {
                 setShapeList([...shapeList, {x: mouse.x + scroll.x, y: mouse.y + scroll.y, key: uuidv4(), var: randVar}]);
             }
         }
-        // console.log(shapeList);
-
     }
-    
+
     const clearArray = () => {
         if(shapeList.length !== 0){
             setShapeList([]);
         }
     }
+
+    useEffect(() => {
+        window.addEventListener("resize", clearArray);
+        return () => window.removeEventListener("resize", clearArray);
+    })
+
+
+    return (
+        <TransitionGroup className="hero-ball-container" onClick={() => {handleMouseClick()}}>
+                {
+                    shapeList.map(shape => {
+                        //cheeky lil pythagoras theorem moment here
+                        var a = shape.x - size.width/2;
+                        var b = shape.y - size.height/2;
+                        var c = Math.sqrt( a * a + ((b * b)*3) );
+                        let val = c / 4;
+                        let z = Math.floor(200 + val);
+                        let zString = z.toString();
+                        return (
+                            <CSSTransition key={shape.key} timeout={500} classNames="ball">
+                                <div key={shape.key} className={"hero-ball " + shape.var} 
+                                    style={{
+                                        top: shape.y + "px", 
+                                        left: shape.x + "px", 
+                                        width: val + "px", 
+                                        height: val + "px",
+                                        zIndex: zString
+                                    }}></div>
+                            </CSSTransition>
+                        )
+                    })
+                }
+        </TransitionGroup>    
+    )
+}
+
+const Hero = () => {
+
+    const delay = 1500;
 
     const [perspective, setPerspective] = useState(false);
     const [perspectiveFinished, setPerspectiveFinished] = useState(false);
@@ -65,35 +111,11 @@ const Hero = () => {
     useEffect(() => {
         setTimeout(() => setPerspective(true), delay);
         setTimeout(() => setPerspectiveFinished(true), delay + 1300);
-        window.addEventListener("resize", clearArray);
-        return () => window.removeEventListener("resize", clearArray);
     });
 
-
-
     return (
-        <main className="hero-container" onClick={() => handleMouseClick()}>
-            <div className="hero-ball-container">
-            {
-                shapeList.map(shape => {
-                    //cheeky lil pythagoras theorem moment here
-                    var a = shape.x - size.width/2;
-                    var b = shape.y - size.height/2;
-                    var c = Math.sqrt( a * a + ((b * b)*3) );
-                    let val = c / 4;
-                    let z = Math.floor(200 + val);
-                    let zString = z.toString();
-                    return <div key={shape.key} className={"hero-ball " + shape.var} 
-                                style={{
-                                    top: shape.y + "px", 
-                                    left: shape.x + "px", 
-                                    width: val + "px", 
-                                    height: val + "px",
-                                    zIndex: zString
-                                }}></div>
-                })
-            }
-            </div>
+        <main className="hero-container">
+            <Balls />
             <img src={Logo} alt="CoMotion 2022 Logo" className={perspective ? "hero-perspectiveImg" : ""} />
             <div className="hero-background">
                 <div className="hero-top"></div>
