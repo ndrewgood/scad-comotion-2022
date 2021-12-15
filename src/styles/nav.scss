@@ -31,7 +31,7 @@
   
 .box {
     display: block;
-    width: 100px;
+    width: 120px;
     height: 80px;
     position: relative;
     transform-style: preserve-3d;
@@ -45,15 +45,24 @@
     }
 
     &.pattern-1 {
-        .box__face--top  { background: #ff8937; }
+        .box__face--top  { 
+            background: url(../assets/images/nav/navbg1.png); 
+            background-size: cover;
+        }
     }
 
     &.pattern-2 {
-        .box__face--top  { background: #b0f1bf; }
+        .box__face--top  { 
+            background: url(../assets/images/nav/navbg2.png); 
+            background-size: cover;
+        }
     }
 
     &.pattern-3 {
-        .box__face--top  { background: #ebaff0; }
+        .box__face--top  { 
+            background: url(../assets/images/nav/navbg3.png); 
+            background-size: cover;
+        }
     }
 }
 
@@ -75,8 +84,14 @@
     align-items: center;
 }
 
+.box__face--front {
+    font-weight: 700;
+    font-size: 18px;
+    color: #291E39;
+}
+
 .box__face--front, .box__face--back {
-    width: 100px;
+    width: 120px;
     height: 80px;
     
 }
@@ -84,11 +99,11 @@
 .box__face--left, .box__face--right {
     width: 80px;
     height: 80px;
-    left: 10px;
+    left: 20px;
 }
 
 .box__face--top, .box__face--bottom {
-    width: 100px;
+    width: 120px;
     height: 80px;
     top: 0px;
 }
@@ -117,11 +132,11 @@
 .box__face--front  { transform: rotateY(  0deg) translateZ( 40px); }
 .box__face--back   { transform: rotateY(180deg) translateZ( 40px); }
 
-.box__face--right { transform: rotateY( 90deg) translateZ(50px); }
-.box__face--left  { transform: rotateY(-90deg) translateZ(50px); }
+.box__face--right { transform: rotateY( 90deg) translateZ(60px); }
+.box__face--left  { transform: rotateY(-90deg) translateZ(60px); }
 
-.rightWall { transform: rotateY( 90deg) translateZ(150px); }
-.leftWall  { transform: rotateY(-90deg) translateZ(150px); }
+.rightWall { transform: rotateY( 90deg) translateZ(180px); }
+.leftWall  { transform: rotateY(-90deg) translateZ(180px); }
 
 .box__face--top    { transform: rotateX( 90deg) translateZ(40px); }
 .box__face--bottom { transform: rotateX(-90deg) translateZ(40px); }

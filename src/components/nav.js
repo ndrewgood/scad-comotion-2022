@@ -1,13 +1,38 @@
-import * as React from "react"
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby'
 
 import '../styles/nav.scss'
 
 const Nav = ({context}) => {
+    const [sticky, setSticky] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+
+        return function cleanup() {
+            window.removeEventListener("scroll", handleScroll)
+        };
+    });
+
+
+    const handleScroll = () => {
+        var mainBounding = document.querySelector('nav').getBoundingClientRect();
+
+        if (mainBounding.top <= 0) {
+            if(!sticky){
+                setSticky(true);
+            }
+        } else {
+            if(sticky){
+                setSticky(false);
+            }
+        }
+    }
+
 
     return (
         <nav className={"nav-container " + context}>
-            <Link to="/">Home</Link>
+            {sticky ? <Link to="/">Home</Link> : null}
             <div className="nav-right">
                 <div className="wall">
                     <div className="leftWall"></div>

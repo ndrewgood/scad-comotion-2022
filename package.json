@@ -21,6 +21,7 @@
     "react-helmet": "^6.1.0",
     "react-transition-group": "^4.4.2",
     "sass": "^1.43.5",
+    "sharp": "^0.29.3",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
