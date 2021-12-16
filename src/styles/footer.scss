@@ -1,11 +1,98 @@
-.footer-container {
-    width: 100vw;
-    height: 300px;
+footer {
     background-color: #291F39;
-    display: flex;
-    text-align: center;
-    p {
-        margin: auto;
-    }
+    padding: 48px 0 64px;
 
+    
+
+    .footer-container {
+        max-width: 1400px;
+        width: 80vw;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 40px;
+        margin: 0 auto;
+        color: #f4eedd;
+
+        @media only screen and (max-width: 750px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            .socialAndCopyright {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+
+
+        .contact {
+            h3 {
+                margin: 0 0 8px;
+                font-weight: 700;
+                line-height: normal;
+                font-size: 24px;
+                line-height: 30px;
+            }
+
+            p {
+                margin: 0;
+                font-size: 18px;
+                max-width: 550px;
+
+                a {
+                    color: #f4eedd;
+                    text-decoration: none;
+                    color: #B0F1BF;
+
+                    
+                }
+
+                span {
+                    span {
+                        background: url('../assets/images/nav/navbg4.png');
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+
+        .socialAndCopyright {
+            ul {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 8px;
+                padding: 0;
+                margin: 0 0 12px;
+
+                li {
+                    list-style: none;
+                    height: 28px;
+
+                    svg {
+                        height: 28px;
+
+                        path {
+                            fill: #f4eedd;
+                        }     
+                    }
+                }
+            }
+
+            a {
+                color: #f4eedd;
+            }
+
+            p {
+                font-size: 18px;
+                margin: none;
+            }
+        }
+    }
 }
+
