@@ -15,7 +15,7 @@ const Footer = () => {
                 <div className="contact">
                     <h3>Contact</h3>
                     <p>
-                        For any questions about the event, email MOME Love Co-Presidents [name] &amp; [name] at <CopyMailTo defaultTooltip="Copy" copiedTooltip="Copied" tooltipStyles={{border: "solid 4px #CD6D2A", borderRadius: "0px", borderStyle: "outset", padding: "8px 20px", fontSize: "14px"}} email="momelove@clubs.scad.edu"/>. 
+                        For any questions about the event, email MOME Love Co-Presidents Alexandera Marca &amp; Kaleb Sweeney at <CopyMailTo defaultTooltip="Copy" copiedTooltip="Copied" tooltipStyles={{border: "solid 4px #CD6D2A", borderRadius: "0px", borderStyle: "outset", padding: "8px 20px", fontSize: "14px"}} email="momelove@clubs.scad.edu"/>. 
                     </p>
                 </div>
                 <div className="socialAndCopyright">

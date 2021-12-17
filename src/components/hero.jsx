@@ -10,9 +10,25 @@ import Logo from '../assets/images/still-logo.png'
 
 // https://stackoverflow.com/questions/45363008/how-can-i-detect-when-video-finished-playing-react 
 
+// Global Variables
+const delay1 = 1500;
+const delay2 = 1300;
+
+
+// (ik two randomInt functions is chaotic, don't judge..)
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
-  }
+}
+
+function getRandomInt2(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+}
+
+function map_range(value, low1, high1, low2, high2) {
+    return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+}
 
 const Balls = () => {
 
@@ -23,10 +39,51 @@ const Balls = () => {
 
     const mouse = useMousePosition();
     const [shapeList, setShapeList] = useState([]);
+    const [count, setCount] = useState(0);
     const [varList, setVarList] = useState([...variations]);
     const scroll = useScrollPosition();
     const size = useWindowSize();
-    const [inProp, setInProp] = useState(false);
+
+    const [perspectiveFinished, setPerspectiveFinished] = useState(false);
+
+    const shapeSections = [
+        {x: getRandomInt2(0, size.width/3),
+         y: getRandomInt2(0, (size.height-80)/3)
+        },
+        {x: getRandomInt2(size.width/3, (size.width/3)*2),
+        y: getRandomInt2(0, (size.height-80)/3)
+        },
+        {x: getRandomInt2((size.width/3)*2, size.width),
+        y: getRandomInt2(0, (size.height-80)/3)
+        },
+        {x: getRandomInt2((size.width/3)*2, size.width),
+        y: getRandomInt2((size.height-80)/3, ((size.height-80)/3)*2)
+        },
+        {x: getRandomInt2((size.width/3)*2, size.width),
+        y: getRandomInt2(((size.height-80)/3)*2, (size.height-80))
+        },
+        {x: getRandomInt2(size.width/3, (size.width/3)*2),
+        y: getRandomInt2(((size.height-80)/3)*2, (size.height-80))
+        },
+        {x: getRandomInt2(0, size.width/3),
+        y: getRandomInt2(((size.height-80)/3)*2, (size.height-80))
+        },
+        {x: getRandomInt2(0, size.width/3),
+        y: getRandomInt2((size.height-80)/3, ((size.height-80)/3)*2)
+        },
+        {x: getRandomInt2(size.width/3, (size.width/3)*2),
+        y: getRandomInt2(0, (size.height-80)/3)
+        },
+        {x: getRandomInt2((size.width/3)*2, size.width),
+        y: getRandomInt2((size.height-80)/3, ((size.height-80)/3)*2)
+        },
+        {x: getRandomInt2(size.width/3, (size.width/3)*2),
+        y: getRandomInt2(((size.height-80)/3)*2, (size.height-80))
+        },
+        {x: getRandomInt2(0, size.width/3),
+        y: getRandomInt2((size.height-80)/3, ((size.height-80)/3)*2)
+        },
+    ]
 
 
     const transitionStyles = {
@@ -37,8 +94,28 @@ const Balls = () => {
     };
       
 
-    const handleMouseClick = () => {
-        if(mouse.x < size.width - posLimit && mouse.x > posLimit && mouse.y > posLimit && mouse.y < size.height - posLimit) {
+    const addBall = (fromMouseClick, section) => {
+        if (fromMouseClick) {
+            if(mouse.x < size.width - posLimit && mouse.x > posLimit && mouse.y > posLimit && mouse.y < size.height - posLimit) {
+                let arr;
+                if (varList.length == 0) {
+                    arr = [...variations]
+                } else {
+                    arr = [...varList]
+                }
+                let rand = getRandomInt(arr.length - 1)
+                let randVar = arr[rand];
+                arr.splice(rand, 1)
+                setVarList([...arr]);
+                if (shapeList.length >= shapeNum) {
+                    let arr = [...shapeList];
+                    arr.shift();
+                    setShapeList([...arr, {x: mouse.x + scroll.x, y: mouse.y + scroll.y, key: uuidv4(), var: randVar, width: size.width, height: size.height}]);
+                } else {
+                    setShapeList([...shapeList, {x: mouse.x + scroll.x, y: mouse.y + scroll.y, key: uuidv4(), var: randVar, width: size.width, height: size.height}]);
+                }
+            }
+        } else {
             let arr;
             if (varList.length == 0) {
                 arr = [...variations]
@@ -47,17 +124,11 @@ const Balls = () => {
             }
             let rand = getRandomInt(arr.length - 1)
             let randVar = arr[rand];
-            console.log(rand);
             arr.splice(rand, 1)
             setVarList([...arr]);
-            if (shapeList.length >= shapeNum) {
-                let arr = [...shapeList];
-                arr.shift();
-                setShapeList([...arr, {x: mouse.x + scroll.x, y: mouse.y + scroll.y, key: uuidv4(), var: randVar}]);
-            } else {
-                setShapeList([...shapeList, {x: mouse.x + scroll.x, y: mouse.y + scroll.y, key: uuidv4(), var: randVar}]);
-            }
+            setShapeList([...shapeList, {x: section.x, y: section.y, key: uuidv4(), var: randVar, width: size.width, height: size.height}]);
         }
+
     }
 
     const clearArray = () => {
@@ -66,29 +137,54 @@ const Balls = () => {
         }
     }
 
+ 
     useEffect(() => {
-        window.addEventListener("resize", clearArray);
-        return () => window.removeEventListener("resize", clearArray);
-    })
+        // window.addEventListener("resize", clearArray);
+        // return () => window.removeEventListener("resize", clearArray);
+        // setTimeout(() => addBallEffect(), delay1 + delay2);
+        // const timeout = setTimeout(() => {
+        //     addBall(false);
+        //   }, 3000);
+      
+        // return () => clearTimeout(timeout);
+        setTimeout(() => setPerspectiveFinished(true), delay1 + delay2);
+
+
+        let interval = null;
+        if (perspectiveFinished && count < 12) {
+          interval = setInterval(() => {
+            setCount(count => count + 1);
+            addBall(false, shapeSections[count]);
+          }, 200);
+        } else {
+          clearInterval(interval);
+        }
+        return () => clearInterval(interval);
+    
+    }, [count, shapeList, perspectiveFinished])
 
 
     return (
-        <TransitionGroup className="hero-ball-container" onClick={() => {handleMouseClick()}}>
+        <TransitionGroup className="hero-ball-container" onClick={() => {addBall(true)}}>
                 {
                     shapeList.map(shape => {
+                        let x = (shape.x / shape.width) * 100;
+                        let y = (shape.y / shape.height) * 100;
+
                         //cheeky lil pythagoras theorem moment here
-                        var a = shape.x - size.width/2;
-                        var b = shape.y - size.height/2;
-                        var c = Math.sqrt( a * a + ((b * b)*3) );
-                        let val = c / 4;
+                        var a = Math.abs(x - 50);
+                        var b = Math.abs(y - 45);
+                        var c = Math.sqrt( (a * a)*2 + ((b * b)*3) );
+                        let val = map_range(Math.floor(c), 0, 100, 0, 250);
                         let z = Math.floor(200 + val);
                         let zString = z.toString();
+
                         return (
                             <CSSTransition key={shape.key} timeout={500} classNames="ball">
                                 <div key={shape.key} className={"hero-ball " + shape.var} 
                                     style={{
-                                        top: shape.y + "px", 
-                                        left: shape.x + "px", 
+                                        top: y + "vh", 
+                                        left: x + "vw", 
                                         width: val + "px", 
                                         height: val + "px",
                                         zIndex: zString
@@ -103,15 +199,13 @@ const Balls = () => {
 
 const Hero = () => {
 
-    const delay = 1500;
+
 
     const [perspective, setPerspective] = useState(false);
-    const [perspectiveFinished, setPerspectiveFinished] = useState(false);
 
     useEffect(() => {
-        setTimeout(() => setPerspective(true), delay);
-        setTimeout(() => setPerspectiveFinished(true), delay + 1300);
-    });
+        setTimeout(() => setPerspective(true), delay1);
+    }, []);
 
     return (
         <main className="hero-container">

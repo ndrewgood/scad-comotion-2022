@@ -24,7 +24,7 @@ const Description = () => (
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" />
+    <Seo title="SCAD CoMotion 2022" />
     <Hero />
     <Nav context="nav-index"/>
     <Description />

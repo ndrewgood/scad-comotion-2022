@@ -17,7 +17,10 @@
         color: global.$tan;
         max-width: 530px;
         font-size: 1.4rem;
-   
+        padding: 0 20px;
+        @media only screen and (max-width: 600px) {
+            font-size: 1.2rem;
+          }
 
     }
     .description-dots {
