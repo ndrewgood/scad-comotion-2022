@@ -4,9 +4,11 @@ import { useWindowSize } from '../util/useWindowDimensions';
 import { useScrollPosition } from "../util/useScrollPosition";
 import { v4 as uuidv4 } from 'uuid';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
 import '../styles/hero.scss'
 
 import Logo from '../assets/images/still-logo.png'
+import LogoAnimation from '../assets/videos/logoAnimation_final2.mp4'
 
 // https://stackoverflow.com/questions/45363008/how-can-i-detect-when-video-finished-playing-react 
 
@@ -203,14 +205,11 @@ const Hero = () => {
 
     const [perspective, setPerspective] = useState(false);
 
-    useEffect(() => {
-        setTimeout(() => setPerspective(true), delay1);
-    }, []);
-
     return (
         <main className="hero-container">
             <Balls />
-            <img src={Logo} alt="CoMotion 2022 Logo" className={perspective ? "hero-perspectiveImg" : ""} />
+
+            {/* <img src={Logo} alt="CoMotion 2022 Logo" className={perspective ? "hero-perspectiveImg" : ""} /> */}
             <div className="hero-background">
                 <div className="hero-top"></div>
                 <div className="hero-right"></div>
@@ -218,6 +217,11 @@ const Hero = () => {
                 <div className="hero-left"></div>
             </div>
             <div className={perspective ? "hero-back hero-perspectiveBack" : "hero-back"}></div>
+            <video autoPlay muted className={perspective ? "hero-perspectiveVideo" : ""} onEnded={() => setPerspective(true)}>
+                <source src={LogoAnimation}  type="video/mp4" />
+            </video>
+            <div className={perspective ? "hero-backbg hero-perspectiveBack" : "hero-backbg"}></div>
+
         </main>
     )
 }
