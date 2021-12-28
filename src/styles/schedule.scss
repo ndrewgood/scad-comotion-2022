@@ -1,11 +1,84 @@
-.schedule-container {
-    width: 100vw;
-    height: 900px;
+.schedule {
+    padding: 80px 0;
     background-color: #F4EEDD;
-    display: flex;
-    text-align: center;
-    p {
-        margin: auto;
+
+    h2 {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 600;
     }
 
+    .schedule-container {
+        width: 60vw;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .calendar-slide {
+
+            .carousel__inner-slide {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+
+        .schedule-item {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            p {
+                margin: 0;
+                font-size: 18px;
+                color: #291F39;
+            }
+
+            h4 {
+                margin: 0;
+                font-family: omnes-pro;
+                font-weight: 700;
+                font-size: 21px;
+                color: #291F39;
+            }
+        }
+    }
+}
+
+.dots {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    .dot {
+        border-radius: 0;
+        width: 132px;
+        height: 48px;
+        border: none;
+        font-size: 18px;
+        box-sizing: border-box;
+        transition: all 300ms ease-in;
+
+        &:hover {
+            box-sizing: border-box;
+            border: solid 8px rgba(0, 0, 0, 0.3);
+            border-style: inset;
+            transition: all 300ms ease-in;
+            font-size: 16px;
+        }
+
+        &.dot-1 {
+            background: #b0f1bf;
+        }
+
+        &.dot-2 {
+            background: #60CBEE;
+        }
+
+        &.dot-3 {
+            background: #ebaff0;
+        }
+    }
 }
