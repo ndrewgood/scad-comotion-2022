@@ -7,8 +7,8 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import '../styles/hero.scss'
 
-import Logo from '../assets/images/still-logo.png'
-import LogoAnimation from '../assets/videos/logoAnimation_final2.mp4'
+import Logo from '../assets/images/hero/logoStill.png'
+import LogoAnimation from '../assets/videos/logoAnimation_final_v2-1.mp4'
 
 // https://stackoverflow.com/questions/45363008/how-can-i-detect-when-video-finished-playing-react 
 
@@ -34,9 +34,9 @@ function map_range(value, low1, high1, low2, high2) {
 
 const Balls = () => {
 
-    const shapeNum = 16
-    const posLimit = 30
-    const variations = ["circle1", "circle2", "circle3"]
+    const shapeNum = 20;
+    const posLimit = 30;
+    const variations = ["circle1", "circle2", "circle3"];
     const duration = 300;
 
     const mouse = useMousePosition();
@@ -86,14 +86,68 @@ const Balls = () => {
         y: getRandomInt2((size.height-80)/3, ((size.height-80)/3)*2)
         },
     ]
-
-
-    const transitionStyles = {
-        entering: { backgroundColor: "red" },
-        entered:  { backgroundColor: "blue" },
-        exiting:  { backgroundColor: "green" },
-        exited:  { backgroundColor: "yellow" },
-    };
+    const shapeSections2 = [
+        {x: 0, y: 0,
+            vw: 5,
+            vh: 18
+        },
+        {x: 0, y: 0,
+            vw: 94,
+            vh: 65
+        },
+        {x: 0, y: 0,
+            vw: 22,
+            vh: 67
+        },
+        {x: 0, y: 0,
+            vw: 45,
+            vh: 20
+        },
+        {x: 0, y: 0,
+            vw: 70,
+            vh: 83
+        },
+        {x: 0, y: 0,
+            vw: 17,
+            vh: 33
+        },
+        {x: 0, y: 0,
+            vw: 77,
+            vh: 55
+        },
+        {x: 0, y: 0,
+            vw: 33,
+            vh: 82
+        },
+        {x: 0, y: 0,
+            vw: 60,
+            vh: 13
+        },
+        {x: 0, y: 0,
+            vw: 8,
+            vh: 50
+        },
+        {x: 0, y: 0,
+            vw: 85,
+            vh: 25
+        },
+        {x: 0, y: 0,
+            vw: 47,
+            vh: 71
+        },
+        {x: 0, y: 0,
+            vw: 77,
+            vh: 34
+        },
+        {x: 0, y: 0,
+            vw: 25,
+            vh: 10
+        },
+        {x: 0, y: 0,
+            vw: 75,
+            vh: 11
+        }
+    ]
       
 
     const addBall = (fromMouseClick, section) => {
@@ -109,26 +163,19 @@ const Balls = () => {
                 let randVar = arr[rand];
                 arr.splice(rand, 1)
                 setVarList([...arr]);
+
+
                 if (shapeList.length >= shapeNum) {
                     let arr = [...shapeList];
                     arr.shift();
-                    setShapeList([...arr, {x: mouse.x + scroll.x, y: mouse.y + scroll.y, key: uuidv4(), var: randVar, width: size.width, height: size.height}]);
+
+                    setShapeList([...arr, {x: mouse.x + scroll.x, y: mouse.y + scroll.y, key: uuidv4(), var: randVar, width: size.width, height: size.height, vw: null, vh: null}]);
                 } else {
-                    setShapeList([...shapeList, {x: mouse.x + scroll.x, y: mouse.y + scroll.y, key: uuidv4(), var: randVar, width: size.width, height: size.height}]);
+                    setShapeList([...shapeList, {x: mouse.x + scroll.x, y: mouse.y + scroll.y, key: uuidv4(), var: randVar, width: size.width, height: size.height, vw: null, vh: null}]);
                 }
             }
         } else {
-            let arr;
-            if (varList.length == 0) {
-                arr = [...variations]
-            } else {
-                arr = [...varList]
-            }
-            let rand = getRandomInt(arr.length - 1)
-            let randVar = arr[rand];
-            arr.splice(rand, 1)
-            setVarList([...arr]);
-            setShapeList([...shapeList, {x: section.x, y: section.y, key: uuidv4(), var: randVar, width: size.width, height: size.height}]);
+            setShapeList([...shapeList, {x: section.x, y: section.y, key: uuidv4(), var: varList[getRandomInt(varList.length)], width: size.width, height: size.height, vw: section.vw ? section.vw : null, vh: section.vh ? section.vh : null}]);
         }
 
     }
@@ -141,22 +188,13 @@ const Balls = () => {
 
  
     useEffect(() => {
-        // window.addEventListener("resize", clearArray);
-        // return () => window.removeEventListener("resize", clearArray);
-        // setTimeout(() => addBallEffect(), delay1 + delay2);
-        // const timeout = setTimeout(() => {
-        //     addBall(false);
-        //   }, 3000);
-      
-        // return () => clearTimeout(timeout);
         setTimeout(() => setPerspectiveFinished(true), delay1 + delay2);
 
-
         let interval = null;
-        if (perspectiveFinished && count < 12) {
+        if (perspectiveFinished && count < 15) {
           interval = setInterval(() => {
             setCount(count => count + 1);
-            addBall(false, shapeSections[count]);
+            addBall(false, shapeSections2[count]);
           }, 200);
         } else {
           clearInterval(interval);
@@ -170,14 +208,20 @@ const Balls = () => {
         <TransitionGroup className="hero-ball-container" onClick={() => {addBall(true)}}>
                 {
                     shapeList.map(shape => {
-                        let x = (shape.x / shape.width) * 100;
-                        let y = (shape.y / shape.height) * 100;
+                        let x = shape.vw !== null ? shape.vw : (shape.x / shape.width) * 100;
+                        let y = shape.vh !== null ? shape.vh : (shape.y / shape.height) * 100;
+                        let mult = (size.width/1920)
+                        if (size.width/1920 < .6) {
+                            mult = .6;
+                        } else {
+                            mult = (size.width/1920)
+                        }
 
                         //cheeky lil pythagoras theorem moment here
                         var a = Math.abs(x - 50);
                         var b = Math.abs(y - 45);
                         var c = Math.sqrt( (a * a)*2 + ((b * b)*3) );
-                        let val = map_range(Math.floor(c), 0, 100, 0, 250);
+                        let val = map_range(Math.floor(c), 0, 100, 0, 300) * mult;
                         let z = Math.floor(200 + val);
                         let zString = z.toString();
 
@@ -217,10 +261,15 @@ const Hero = () => {
                 <div className="hero-left"></div>
             </div>
             <div className={perspective ? "hero-back hero-perspectiveBack" : "hero-back"}></div>
-            <video autoPlay muted className={perspective ? "hero-perspectiveVideo" : ""} onEnded={() => setPerspective(true)}>
+            <video autoPlay muted className={perspective ? "hero-perspectiveVideo display-none" : ""} onEnded={() => setPerspective(true)}>
                 <source src={LogoAnimation}  type="video/mp4" />
             </video>
+            <img src={Logo} alt="CoMotion 2022 Logo" className={perspective ? "hero-perspectiveVideo" : ""} />
             <div className={perspective ? "hero-backbg hero-perspectiveBack" : "hero-backbg"}></div>
+            <div className={perspective ? "hero-scroll opacity" : "hero-scroll"}>
+                <p>Scroll for more</p>
+                <div className="hero-scrollIcon"></div>
+            </div>
 
         </main>
     )

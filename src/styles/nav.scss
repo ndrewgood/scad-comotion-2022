@@ -24,12 +24,12 @@ nav {
     justify-content: flex-start;
     align-items: center;
     height: 80px;
-    transition: all 450ms ease-in;
+    transition: all 450ms ease-in-out;
     opacity: 1;
     flex: auto;
     
     &.hidden {
-        transition: all 450ms ease-in;
+        transition: all 450ms ease-in-out;
         opacity: 0;
         flex: 0;
         width: 0;
@@ -46,7 +46,7 @@ nav {
     display: flex;
     flex-direction: row;
     perspective: 200px;
-    transition: all 450ms ease-in;
+    transition: all 450ms ease-in-out;
 
     a {
         margin: 0;
@@ -61,12 +61,12 @@ nav {
     position: relative;
     transform-style: preserve-3d;
     transform: translateZ(-40px);
-    transition: 300ms all ease-in;
+    transition: 300ms all ease-in-out;
     color: #291f39;
 
     &:hover {
         transform: translateZ( -80px) rotateX(-90deg);
-        transition: 300ms all ease-in;
+        transition: 300ms all ease-in-out;
     }
 
     &.pattern-1 {
