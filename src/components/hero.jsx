@@ -7,7 +7,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import '../styles/hero.scss'
 
-import Logo from '../assets/images/hero/logoStill.png'
+import Logo from '../assets/images/hero/logoStill_update.png'
 import LogoAnimation from '../assets/videos/logoAnimation_final_v2-1.mp4'
 
 // https://stackoverflow.com/questions/45363008/how-can-i-detect-when-video-finished-playing-react 
