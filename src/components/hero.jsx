@@ -261,7 +261,7 @@ const Hero = () => {
                 <div className="hero-left"></div>
             </div>
             <div className={perspective ? "hero-back hero-perspectiveBack" : "hero-back"}></div>
-            <video autoPlay muted className={perspective ? "hero-perspectiveVideo display-none" : ""} onEnded={() => setPerspective(true)}>
+            <video autoPlay muted playsInline className={perspective ? "hero-perspectiveVideo display-none" : ""} onEnded={() => setPerspective(true)}>
                 <source src={LogoAnimation}  type="video/mp4" />
             </video>
             <img src={Logo} alt="CoMotion 2022 Logo" className={perspective ? "hero-perspectiveVideo" : ""} />

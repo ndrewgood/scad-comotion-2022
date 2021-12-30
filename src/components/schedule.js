@@ -31,7 +31,7 @@ const ScheduleSlide = props => {
 const Schedule = () => {
 
     return (
-        <main className="schedule">
+        <main className="schedule" id="schedule">
             <div className="schedule-container">
                 <h2>Schedule</h2>
                 <div className="schedule-holder">

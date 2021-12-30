@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby'
-import Logo from '../assets/images/still-logo.png'
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import '../styles/nav.scss'
+
+import Logo from '../assets/images/still-logo.png'
+
 
 const Nav = ({context}) => {
     const [sticky, setSticky] = useState(false);
@@ -43,7 +46,7 @@ const Nav = ({context}) => {
                     <div className="wall">
                         <div className="leftWall"></div>
                     </div>
-                    <Link className="box bring-forward pattern-1" to="/schedule">
+                    <Link className="box bring-forward pattern-1" to="/#schedule">
                         <div className="box__face box__face--front">Schedule</div>
                         <div className="box__face box__face--back"></div>
                         <div className="box__face box__face--right"></div>
