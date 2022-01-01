@@ -18,7 +18,11 @@
         @media only screen and (max-width: 650px) {
             grid-template-columns: repeat(1, 1fr);
         }
+        a {
+            font-family: omnes-pro, sans-serif !important;
+        }
         .cta {
+            font-family: omnes-pro, sans-serif !important;
             height: 300px;
             width: 100%;
             background-position: center;
