@@ -1,6 +1,4 @@
-import * as React from "react"
-import { CarouselProvider, Slider, Slide, Dot } from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
+import React, { useEffect, useState } from "react"
 import '../styles/schedule.scss'
 
 const ScheduleItem = props => {
@@ -14,7 +12,7 @@ const ScheduleItem = props => {
 
 const ScheduleSlide = props => {
     return(
-        <Slide index={props.sNumber} className="calendar-slide">
+        <div className="schedule-day">
             {
                 props.items.map(item => {
                     return(
@@ -24,18 +22,68 @@ const ScheduleSlide = props => {
                     )
                 })
             }
-        </Slide>
+        </div>
+    )
+}
+
+const Day1 = () => {
+    return(
+        <ScheduleSlide
+            items={[
+                {title: "Opening Statement", time: "10:00 am - 11:15 am"},
+                {title: "Title Sequence", time: "11:15 am - 11:30 am"},
+                {title: "Keynote", time: "11:30 am - 12:30 pm"},
+                {title: "Lunch Break", time: "12:30 pm - 1:30 pm"},
+                {title: "Student Showcase", time: "1:30 pm - 2:45 pm"},
+                {title: "Pushing Ideas Through Collaboration and Discipline Variety Panel", time: "2:45 pm - 4:00 pm"},
+                {title: "CoMotion Branding Behind the Scenes Panel", time: "4:00 pm - 5:00 pm"}]}/>
+    )
+}
+
+const Day2 = () => {
+    return(
+        <ScheduleSlide
+            items={[
+                {title: "Portfolio Reviews", time: "11:00 am - 1:00 pm"},
+                {title: "Lunch Break", time: "1:00 pm - 2:00 pm"},
+                {title: "Alumni Panel", time: "2:00 pm - 3:15 pm"},
+                {title: "Expanding Horizons: New Mediums in Motion Media Panel", time: "3:15 pm - 5:00 pm"}]}/>
+    )
+}
+
+const Day3 = () => {
+    return(
+        <ScheduleSlide
+            items={[
+                {title: "Portfolio Reviews", time: "11:00 am - 1:00 pm"},
+                {title: "Lunch Break", time: "1:00 pm - 2:00 pm"},
+                {title: "Exploring 'The Cliche' Panel", time: "2:00 pm - 3:15 pm"},
+                {title: "Awards Ceremony", time: "3:15 pm - 4:30 pm"}]}/>
     )
 }
 
 const Schedule = () => {
+    const [activeDay, setActiveDay] = useState(0);
 
     return (
         <main className="schedule" id="schedule">
             <div className="schedule-container">
                 <h2>Schedule</h2>
                 <div className="schedule-holder">
-                    <CarouselProvider
+
+                    <div className="daySelector">
+                        <div className={activeDay == 0 ? "day day1 selected" : "day day1"} onClick={() => setActiveDay(0)}>Day 1</div>
+                        <div className={activeDay == 1 ? "day day2 selected" : "day day2"} onClick={() => setActiveDay(1)}>Day 2</div>
+                        <div className={activeDay == 2 ? "day day3 selected" : "day day3"} onClick={() => setActiveDay(2)}>Day 3</div>
+                    </div>
+
+                    { activeDay == 0 ? <Day1/> : null }
+                    { activeDay == 1 ? <Day2/> : null }
+                    { activeDay == 2 ? <Day3/> : null }
+                    
+
+
+                    {/* <CarouselProvider
                         naturalSlideWidth={100}
                         naturalSlideHeight={50}
                         totalSlides={3}>
@@ -70,7 +118,7 @@ const Schedule = () => {
                                     {title: "Exploring 'The Cliche' Panel", time: "2:00 pm - 3:15 pm"},
                                     {title: "Awards Ceremony", time: "3:15 pm - 4:30 pm"}]}/>
                         </Slider>      
-                    </CarouselProvider>
+                    </CarouselProvider> */}
                     </div>
             </div>
         </main>

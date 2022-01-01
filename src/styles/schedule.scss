@@ -1,32 +1,39 @@
 .schedule {
-    padding: 80px 0;
+    padding: 80px 0 40px;
     background-color: #F4EEDD;
 
     h2 {
         text-align: center;
         font-size: 32px;
         font-weight: 600;
+        margin: 0;
     }
 
     .schedule-container {
-        width: 60vw;
-        max-width: 1200px;
+        width: 80vw;
+        max-width: 1400px;
         margin: 0 auto;
 
-        .calendar-slide {
+        .schedule-day {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
 
-            .carousel__inner-slide {
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                gap: 16px;
+            @media only screen and (max-width: 800px) {
+                grid-template-columns: 1fr;
             }
         }
 
         .schedule-item {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #FFDCDF;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: solid 8px #EBAFFC;
+            text-align: center;
 
             p {
                 margin: 0;
@@ -39,46 +46,73 @@
                 font-family: omnes-pro;
                 font-weight: 700;
                 font-size: 21px;
-                color: #291F39;
+                color: #5E3AF5;
             }
         }
     }
 }
 
-.dots {
+.daySelector {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 16px;
+    margin-bottom: 48px;
 
-    .dot {
+    .day {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 0;
         width: 132px;
-        height: 48px;
+        height: 64px;
         border: none;
         font-size: 18px;
         box-sizing: border-box;
         transition: all 300ms ease-in;
+        border-radius: 50%;
+        transform-origin: center;
+        font-family: 'omnes-pro';
+        font-weight: 700;
+
+        &.selected {
+            transition: all 300ms ease-in;
+            color: #5E3AF5;
+
+            &.day1 {
+                border: dotted 5px #FF8937;
+                transform: rotate(-5deg);
+            }
+
+            &.day2 {
+                border: dotted 5px #B0F1BF;
+                transform: rotate(6deg);
+            }
+
+            &.day3 {
+                border: dotted 5px #60CBEE;
+                transform: rotate(-7deg);
+            }
+        }
 
         &:hover {
-            box-sizing: border-box;
-            border: solid 8px rgba(0, 0, 0, 0.3);
-            border-style: inset;
             transition: all 300ms ease-in;
-            font-size: 16px;
-        }
 
-        &.dot-1 {
-            background: #b0f1bf;
-        }
+            &.day1 {
+                border: dotted 5px #FF8937;
+                transform: rotate(-5deg);
+            }
 
-        &.dot-2 {
-            background: #60CBEE;
-        }
+            &.day2 {
+                border: dotted 5px #B0F1BF;
+                transform: rotate(6deg);
+            }
 
-        &.dot-3 {
-            background: #ebaff0;
+            &.day3 {
+                border: dotted 5px #60CBEE;
+                transform: rotate(-7deg);
+            }
         }
     }
 }
