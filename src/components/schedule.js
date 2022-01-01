@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react"
 import '../styles/schedule.scss'
+import { SwitchTransition, CSSTransition } from 'react-transition-group';
 
 const ScheduleItem = props => {
     return(
         <div className="schedule-item">
+            <p className="number">{props.index}</p>
             <h4>{props.title}</h4>
             <p>{props.time}</p>
         </div>
@@ -14,9 +16,10 @@ const ScheduleSlide = props => {
     return(
         <div className="schedule-day">
             {
-                props.items.map(item => {
+                props.items.map((item, index) => {
                     return(
                         <ScheduleItem
+                            index={index+1}
                             title={item.title}
                             time={item.time}/>
                     )
@@ -64,11 +67,17 @@ const Day3 = () => {
 
 const Schedule = () => {
     const [activeDay, setActiveDay] = useState(0);
+    const [state, setState] = useState(false);    
 
     return (
         <main className="schedule" id="schedule">
             <div className="schedule-container">
-                <h2>Schedule</h2>
+                <div className="schedule-header">
+                    <div className="dotLeft"></div>
+                    <h2>Schedule</h2>
+                    <div className="dotRight"></div>
+                </div>
+                
                 <div className="schedule-holder">
 
                     <div className="daySelector">
@@ -77,11 +86,19 @@ const Schedule = () => {
                         <div className={activeDay == 2 ? "day day3 selected" : "day day3"} onClick={() => setActiveDay(2)}>Day 3</div>
                     </div>
 
-                    { activeDay == 0 ? <Day1/> : null }
-                    { activeDay == 1 ? <Day2/> : null }
-                    { activeDay == 2 ? <Day3/> : null }
-                    
-
+                    <SwitchTransition>
+                        <CSSTransition
+                        key={activeDay}
+                        addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
+                        classNames='fade'
+                        >   
+                            <div>
+                                { activeDay == 0 ? <Day1/> : null }
+                                { activeDay == 1 ? <Day2/> : null }
+                                { activeDay == 2 ? <Day3/> : null }
+                            </div>
+                        </CSSTransition>
+                    </SwitchTransition>
 
                     {/* <CarouselProvider
                         naturalSlideWidth={100}
