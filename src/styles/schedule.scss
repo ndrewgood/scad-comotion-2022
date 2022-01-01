@@ -76,6 +76,10 @@
         font-family: 'omnes-pro';
         font-weight: 700;
 
+        @media only screen and (max-width: 400px) {
+            width: 96px;
+        }
+
         &.selected {
             transition: all 300ms ease-in;
             color: #5E3AF5;

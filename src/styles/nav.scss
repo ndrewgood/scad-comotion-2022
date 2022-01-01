@@ -7,6 +7,11 @@ nav {
 
     &.sticky {
         border-bottom: 3px solid #ccc;
+
+        @media only screen and (max-width: 600px) {
+            transition: all 300ms ease-in;
+            height: 140px;
+        }
     }
 }
 
@@ -17,6 +22,12 @@ nav {
     
     display: flex;
     justify-content: center;
+
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
 
 .homeLink {
@@ -37,6 +48,29 @@ nav {
 
     img {
         height: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        padding-top: 10px;
+        height: 50px;
+        justify-content: center;
+
+        &.hidden {
+            transition: all 450ms ease-in-out;
+            opacity: 0;
+            flex: 0;
+            width: 0;
+            height: 0;
+            padding-top: 0;
+
+            img {
+                display: none;
+            }
+        }
+        
+        img {
+            height: 50px;
+        }
     }
 }
 
