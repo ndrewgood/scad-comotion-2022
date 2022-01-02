@@ -120,7 +120,7 @@
         }
 
         &.selected {
-            transition: all 350ms ease-in;
+            transition: all 350ms ease-in-out;
             color: #5E3AF5;
 
             &.day1 {
@@ -140,8 +140,8 @@
         }
 
         &:hover {
-            transition: all 350ms ease-in;
-
+            transition: all 350ms ease-in-out;
+            cursor: pointer;
             &.day1 {
                 border: dotted 5px #FF8937;
                 transform: scale(1.1) rotate(-5deg);
