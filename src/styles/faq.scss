@@ -21,7 +21,7 @@
     margin: 0 auto;
     // background-color: rgb(199, 199, 199);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     
     .faq-arrow {
@@ -30,12 +30,13 @@
         height: 40px;
         margin: 80px 30px 0px;
         background-repeat: no-repeat;
+        display: none;
         @media only screen and (max-width: 800px) {
             display: none;
         }
     }
     .faq-questionContainer {
-        padding: 20px;
+        padding: 40px 0px 15px;
         // display: flex;
         .faq-question {
             border-radius: 50%;
@@ -48,12 +49,6 @@
                 font-size: 1.4rem;
                 text-align: center;
                 font-weight: 600;
-                @media only screen and (max-width: 1000px) {
-                    font-size: 1.2rem;                  
-                }
-                @media only screen and (max-width: 800px) {
-                    font-size: 1.4rem;
-                }
 
             }
             @media only screen and (max-width: 1000px) {
@@ -62,34 +57,34 @@
             @media only screen and (max-width: 800px) {
                 width: 350px;
             }
+            @media only screen and (max-width: 500px) {
+                width: 250px;
+            }
         }
     }
 
     .faq-answer {
         font-family: Cairo, sans-serif !important;
         width: 600px;
-        font-size: 1.2rem;
-        padding: 20px 0px;
+        font-size: 1.3rem;
+        padding: 0 0 40px 0px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        p {
-            @media only screen and (max-width: 1000px) {
-                font-size: 1.0rem;                  
-            }
-            @media only screen and (max-width: 800px) {
-                font-size: 1.3rem;
-            }
-        }
+        margin: auto;
+
         a {
             color: #5E3AF5;
         }
-        @media only screen and (max-width: 1000px) {
-            width: 350px;             
-        }
+        // @media only screen and (max-width: 1000px) {
+        //     width: 350px;             
+        // }
         @media only screen and (max-width: 800px) {
             margin: auto;
             padding: 0 20px;  
+        }
+        @media only screen and (max-width: 700px) {
+            width: 90vw;
         }
     }
     @media only screen and (max-width: 1000px) {

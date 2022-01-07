@@ -211,17 +211,17 @@ const Balls = () => {
                         let x = shape.vw !== null ? shape.vw : (shape.x / shape.width) * 100;
                         let y = shape.vh !== null ? shape.vh : (shape.y / shape.height) * 100;
                         let mult = (size.width/1920)
-                        if (size.width/1920 < .6) {
-                            mult = .6;
+                        if (size.width/1920 < .5) {
+                            mult = .5 * 0.7;
                         } else {
-                            mult = (size.width/1920)
+                            mult = (size.width/1920) * 0.7;
                         }
 
                         //cheeky lil pythagoras theorem moment here
                         var a = Math.abs(x - 50);
                         var b = Math.abs(y - 45);
                         var c = Math.sqrt( (a * a)*2 + ((b * b)*3) );
-                        let val = map_range(Math.floor(c), 0, 100, 0, 300) * mult;
+                        let val = map_range(Math.floor(c), 0, 100, 0, 400) * mult;
                         let z = Math.floor(200 + val);
                         let zString = z.toString();
 

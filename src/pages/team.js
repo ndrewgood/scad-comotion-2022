@@ -17,6 +17,69 @@ const momeloveList = [
         pic: test,
         color: "pink"
     },
+    {
+        name: "Tyler Rispoli",
+        role: "President",
+        port: "google.com",
+        pic: test,
+        color: "green"
+    },
+    {
+        name: "Tyler Rispoli",
+        role: "President",
+        port: "google.com",
+        pic: test,
+        color: "blue"
+    },
+    {
+        name: "Tyler Rispoli",
+        role: "President",
+        port: "google.com",
+        pic: test,
+        color: "pink"
+    },
+    {
+        name: "Tyler Rispoli",
+        role: "President",
+        port: "google.com",
+        pic: test,
+        color: "green"
+    },
+    {
+        name: "Tyler Rispoli",
+        role: "President",
+        port: "google.com",
+        pic: test,
+        color: "blue"
+    },
+    {
+        name: "Tyler Rispoli",
+        role: "President",
+        port: "google.com",
+        pic: test,
+        color: "pink"
+    },
+    {
+        name: "Tyler Rispoli",
+        role: "President",
+        port: "google.com",
+        pic: test,
+        color: "green"
+    },
+    {
+        name: "Tyler Rispoli",
+        role: "President",
+        port: "google.com",
+        pic: test,
+        color: "blue"
+    },
+    {
+        name: "Tyler Rispoli",
+        role: "President",
+        port: "google.com",
+        pic: test,
+        color: "pink"
+    },
     
 ]
 
