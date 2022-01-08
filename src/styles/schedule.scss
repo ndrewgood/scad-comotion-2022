@@ -9,6 +9,7 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 12px;
+        perspective: 100px;
 
         h2 {
             text-align: center;
@@ -34,13 +35,13 @@
    
 
     .schedule-container {
-        width: 80vw;
-        max-width: 1200px;
+        width: 60vw;
+        max-width: 800px;
         margin: 0 auto;
 
         .schedule-day {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 16px;
 
             @media only screen and (max-width: 800px) {
@@ -162,10 +163,11 @@
 
 .fade-enter{
     opacity: 0;
-    transform: rotateY(180deg);
+    transform: translateY(50px);
  }
  .fade-exit{
     opacity: 1;
+
  }
  .fade-enter-active{
     opacity: 1;
@@ -173,7 +175,7 @@
  }
  .fade-exit-active{
     opacity: 0;
-    transform: rotateY(180deg);
+    transform: translateY(50px);
  }
  .fade-enter-active,
  .fade-exit-active{

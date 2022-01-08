@@ -7,28 +7,14 @@ footer {
     .footer-container {
         max-width: 1400px;
         width: 80vw;
-        display: grid;
-        grid-template-columns: 2fr 1fr;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         gap: 40px;
         margin: 0 auto;
         color: #f4eedd;
-
-        @media only screen and (max-width: 750px) {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-
-            .socialAndCopyright {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-        }
-
-
 
         .contact {
             h3 {
@@ -60,6 +46,11 @@ footer {
         }
 
         .socialAndCopyright {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
             ul {
                 display: flex;
                 flex-direction: row;
