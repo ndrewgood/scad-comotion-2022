@@ -5,8 +5,10 @@ import { SwitchTransition, CSSTransition } from 'react-transition-group';
 const ScheduleItem = props => {
     return(
         <div className="schedule-item">
-            <p className="number">{props.index}</p>
-            <h4>{props.title}</h4>
+            <div>
+                <p className="number">{props.index}</p>
+                <h4>{props.title}</h4>
+            </div>
             <p>{props.time}</p>
         </div>
     )
