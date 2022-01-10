@@ -10,7 +10,8 @@
     display: flex;
     text-align: center;
     h1 {
-        font-family: omnes-pro, sans-serif;
+        font-family: "Cairo", sans-serif;
+        font-weight: 600;
         margin: auto;
         color: white;
     }
@@ -40,10 +41,10 @@
         h1 {
             text-align: center;
             font-size: 30px;
-            font-weight: 700;
             margin: 0;
             color: #5E3AF5;
-            font-family: 'omnes-pro';
+            font-family: "Cairo", sans-serif;
+            font-weight: 600;
             padding: 0 10px;
             @media only screen and (max-width: 650px) {
                 font-size: 24px;

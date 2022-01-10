@@ -1,7 +1,7 @@
 @use 'global';
 
 .ctaGrid {
-    background-color: global.$tan;
+    background-color: #291E39;
     display: flex;
     margin: auto;
     justify-content: center;
@@ -18,10 +18,10 @@
             grid-template-columns: repeat(1, 1fr);
         }
         a {
-            font-family: omnes-pro, sans-serif !important;
+            font-family: "Cairo", sans-serif !important;
         }
         .cta {
-            font-family: omnes-pro, sans-serif !important;
+            font-family: "Cairo", sans-serif !important;
             height: 300px;
             width: 100%;
             background-position: center;
@@ -31,7 +31,7 @@
             text-decoration: none;
             p {
                 margin: auto;
-                font-family: omnes-pro, sans-serif;
+                font-family: "Cairo", sans-serif;
                 font-weight: 600;
                 color: white;
                 font-size: 2rem;

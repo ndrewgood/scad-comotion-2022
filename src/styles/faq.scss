@@ -8,7 +8,8 @@
     display: flex;
     text-align: center;
     h1 {
-        font-family: omnes-pro, sans-serif;
+        font-family: "Cairo", sans-serif;
+        font-weight: 600;
         margin: auto;
         color: white;
     }
@@ -35,6 +36,7 @@
             display: none;
         }
     }
+    
     .faq-questionContainer {
         padding: 40px 0px 15px;
         // display: flex;

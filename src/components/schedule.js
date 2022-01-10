@@ -75,9 +75,9 @@ const Schedule = () => {
         <main className="schedule" id="schedule">
             <div className="schedule-container">
                 <div className="schedule-header">
-                    <div className="dotLeft"></div>
+                    {/* <div className="dotLeft"></div> */}
                     <h2>Schedule</h2>
-                    <div className="dotRight"></div>
+                    {/* <div className="dotRight"></div> */}
                 </div>
                 
                 <div className="schedule-holder">
