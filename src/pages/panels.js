@@ -5,13 +5,14 @@ import Seo from "../components/seo"
 import Nav from '../components/nav'
 import Footer from '../components/footer'
 
-const AttendeesPage = () => (
+import '../styles/faq.scss'
+
+const PanelsPage = () => (
   <Layout>
-    <Seo title="Attendees - CoMotion 2022" />
-    <Nav/>
-    <h1>Attendees Page</h1>
+    <Seo title="Panels - CoMotion 2022" />
+    <Nav />
     <Footer/>
   </Layout>
 )
 
-export default AttendeesPage
+export default PanelsPage

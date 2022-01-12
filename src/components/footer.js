@@ -1,7 +1,7 @@
 import * as React from "react"
 import Facebook from '../assets/svg/footer/fb.inline.svg'
 import Instagram from '../assets/svg/footer/ig.inline.svg'
-import MomeLove from '../assets/svg/footer/mome.png'
+import MomeLove from '../assets/svg/footer/momelove.inline.svg'
 import CopyMailTo from "react-copy-mailto";
 import Orange from "../assets/images/nav/navbg4.png"
 
@@ -20,13 +20,14 @@ const Footer = () => {
                 </div>
                 <div className="socialAndCopyright">
                     <ul className="socialLinks">
-                        <a href="" target="_blank"><li>
+                        <a href="https://www.instagram.com/scadcomotion/" target="_blank"><li>
                             <Instagram/>
                         </li></a>
-                        <a href="" target="_blank"><li>
+                        <a href="https://www.instagram.com/scadmomelove/" target="_blank"><li>
                             {/* <img src={MomeLove} alt="MOMELove logo"/> */}
+                            <MomeLove className="momeLove"/>
                         </li></a>
-                        <a href="" target="_blank"><li>
+                        <a href="https://www.facebook.com/groups/momelove/" target="_blank"><li>
                             <Facebook/>
                         </li></a>
                     </ul>
