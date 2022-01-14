@@ -1,0 +1,207 @@
+#panels {
+    padding: 40px 0 120px;
+    background-color: #F4EEDC;
+    #keynote{
+        text-align: center;
+        h2 {
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        #speakersContainer {
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            justify-content: center;
+            gap: 130px;
+            margin-top: 70px;
+            .speaker {
+                position: relative;
+                text-decoration: none;
+                .speakerPhoto { 
+                    // background-color: red;
+                    background-size: contain;
+                    border-radius: 10px;
+                    height: 330px;
+                    width: 215px;
+                    position: relative;
+                    z-index: 20;
+                }
+                h3 {
+                    font-weight: 700;
+                    font-size: 1.8rem;
+                    position: relative;
+                    z-index: 20;
+                    color: black;
+                }
+                .shape {
+                    height: 230px;
+                    width: 230px;
+                    position: absolute;
+                    z-index: 10;
+                    transition: transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                }
+                &:hover {
+                    cursor: pointer;
+                    #shape1 {
+                        transform: translate(-50%, -50%) rotate(125deg) scale(1.07);
+                    }
+                    #shape2 {
+                        transform: translate(-50%, -50%) rotate(-10deg) scale(1.07);
+                    }
+                    #shape3 {
+                        transform: translate(-50%, -50%) rotate(7deg) scale(1.07);
+                    }
+                    #shape4 {
+                        transform: translate(-50%, -50%) rotate(120deg) scale(1.07);
+                    }
+                    #shape5 {
+                        transform: translate(-50%, -50%) rotate(-10deg) scale(1.07);
+                    }
+                    #shape6 {
+                        transform: translate(-50%, -50%) rotate(3deg) scale(1.07);
+                    }
+                }
+            }
+            @media only screen and (max-width: 750px) {
+                gap: 80px;
+            }
+            @media only screen and (max-width: 650px) {
+                gap: 50px;
+                .photoContainer {
+                    transform: scale(0.8);
+                }
+                h3 {
+                    font-size: 1.6rem !important;
+                    margin-top: -10px;
+                }
+            }
+            @media only screen and (max-width: 530px) {
+                gap: 0px;
+                .photoContainer {
+                    transform: scale(0.7);
+                }
+                h3 {
+                    font-size: 1.5rem !important;
+                    margin-top: -20px;
+                }
+            }
+
+        }
+        p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: auto;
+            width: 90vw;
+            margin-top: 20px;
+            a {
+                color: #5E3AF5;
+            }
+        }
+    }
+    .panelComponent {
+        max-width: 900px;
+        width: calc(90vw - 40px);
+        background-color: #E2F9E7;
+        margin: auto;
+        border: outset 15px #B0F1BF;
+        padding: 10px 20px 15px 20px;
+        display: flex;
+        flex-direction: column;
+        .top {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .tl {
+                .title {
+                    font-family: Cairo;
+                    font-weight: 600;
+                    font-size: 1.6rem;
+                    line-height: 2rem;
+                    margin-top: 8px;
+                    padding-right: 15px;
+                }
+                .speakers {
+                    color: #49A55D;
+                    margin-top: -5px;
+                }
+            }
+            .tr {
+                .time {
+                    margin: 0;
+                    color: #49A55D;
+                    font-size: 1.2rem;
+                    text-align: right;
+                    margin-top: 10px;
+                    min-width: 180px;
+                }
+            }
+            @media only screen and (max-width: 650px) {
+                flex-direction: column;
+                .tr {
+                    margin-top: 5px;
+                    .time {
+                        text-align: left;
+    
+                    }
+                }
+            }
+        }
+        .description {
+            font-size: 1.2rem;
+        }
+        &:not(:first-child) {
+            margin-top: 30px;
+        }
+        &:first-child {
+            margin-top: 60px;
+        }
+    }
+}
+
+.speaker1 {
+    .speakerPhoto {
+        background-image: url('../assets/images/panels/eddy.png');
+    }
+    #shape1 {
+        background-image: url('../assets/svg/panels/panelShape1.svg');
+        transform: translate(-50%, -50%) rotate(115deg);
+        top: 45px;
+        left: 5px;
+    }
+    #shape2 {
+        background-image: url('../assets/svg/panels/panelShape2.svg');
+        transform: translate(-50%, -50%);
+        top: 270px;
+        left: 25px;
+    }
+    #shape3 {
+        background-image: url('../assets/svg/panels/panelShape3.svg');
+        transform: translate(-50%, -50%) rotate(17deg);
+        top: 190px;
+        left: 200px;
+    }
+}
+
+.speaker2 {
+    .speakerPhoto {
+        background-image: url('../assets/images/panels/nevin.png');
+    }
+    #shape4 {
+        background-image: url('../assets/svg/panels/panelShape4.svg');
+        transform: translate(-50%, -50%) rotate(110deg);
+        top: 140px;
+        left: 240px;
+    }
+    #shape5 {
+        background-image: url('../assets/svg/panels/panelShape5.svg');
+        transform: translate(-50%, -50%);
+        top: 50px;
+        left: 25px;
+    }
+    #shape6 {
+        background-image: url('../assets/svg/panels/panelShape6.svg');
+        transform: translate(-50%, -50%) rotate(-6deg);
+        top: 304px;
+        left: 180px;
+    }
+}
