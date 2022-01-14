@@ -5,11 +5,8 @@ import { SwitchTransition, CSSTransition } from 'react-transition-group';
 const ScheduleItem = props => {
     return(
         <div className="schedule-item">
-            <div>
-                <p className="number">{props.index}</p>
-                <h4>{props.title}</h4>
-            </div>
             <p>{props.time}</p>
+            <h4>{props.title}</h4>
         </div>
     )
 }
@@ -75,9 +72,7 @@ const Schedule = () => {
         <main className="schedule" id="schedule">
             <div className="schedule-container">
                 <div className="schedule-header">
-                    {/* <div className="dotLeft"></div> */}
                     <h2>Schedule</h2>
-                    {/* <div className="dotRight"></div> */}
                 </div>
                 
                 <div className="schedule-holder">
