@@ -1,6 +1,7 @@
 .schedule {
     padding: 80px 0 40px;
     background-color: #291E39;
+    position: relative;
 
     .schedule-header {
         display: flex;
@@ -19,18 +20,6 @@
             color: #F4EEDC;
             font-family: 'cairo';
         }
-
-        .dotLeft {
-            height: 14px;
-            width: 96px;
-            background: url("../assets/svg/schedule/dotLeft.svg");
-        }
-
-        .dotRight {
-            height: 14px;
-            width: 96px;
-            background: url("../assets/svg/schedule/dotRight.svg");
-        }
     }
    
 
@@ -48,6 +37,18 @@
 
             @media only screen and (max-width: 700px) {
                 gap: 40px;
+            }
+
+            &.day1 .schedule-item p {
+                color:#FF8937;
+            }
+
+            &.day2 .schedule-item p {
+                color: #B0F1BF;;
+            }
+
+            &.day3 .schedule-item p {
+                color:#60CBEE;
             }
         }
 
@@ -84,6 +85,23 @@
             }
         }
     }
+}
+
+svg {
+    position: absolute;
+    top: 0;
+}
+
+#left {
+    width: 22vw;
+    left: 10px;
+    top: 320px;
+}
+
+#right {
+    width: 22vw;
+    right: 20px;
+    top: 50px;
 }
 
 .daySelector {

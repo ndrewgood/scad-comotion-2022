@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react"
 import '../styles/schedule.scss'
+import ScheduleLeft from '../assets/svg/schedule/scheduleLeft.inline.svg'
+import ScheduleRight from '../assets/svg/schedule/scheduleRight.inline.svg'
 import { SwitchTransition, CSSTransition } from 'react-transition-group';
 
 const ScheduleItem = props => {
@@ -13,7 +15,7 @@ const ScheduleItem = props => {
 
 const ScheduleSlide = props => {
     return(
-        <div className="schedule-day">
+        <div className={"schedule-day " + props.className}>
             {
                 props.items.map((item, index) => {
                     return(
@@ -31,6 +33,7 @@ const ScheduleSlide = props => {
 const Day1 = () => {
     return(
         <ScheduleSlide
+            className="day1"
             items={[
                 {title: "Opening Statement", time: "10:00 am - 11:15 am"},
                 {title: "Title Sequence", time: "11:15 am - 11:30 am"},
@@ -45,6 +48,7 @@ const Day1 = () => {
 const Day2 = () => {
     return(
         <ScheduleSlide
+            className="day2"
             items={[
                 {title: "Portfolio Reviews", time: "11:00 am - 1:00 pm"},
                 {title: "Lunch Break", time: "1:00 pm - 2:00 pm"},
@@ -56,6 +60,7 @@ const Day2 = () => {
 const Day3 = () => {
     return(
         <ScheduleSlide
+            className="day3"
             items={[
                 {title: "Portfolio Reviews", time: "11:00 am - 1:00 pm"},
                 {title: "Lunch Break", time: "1:00 pm - 2:00 pm"},
@@ -70,6 +75,7 @@ const Schedule = () => {
 
     return (
         <main className="schedule" id="schedule">
+            <ScheduleLeft/>
             <div className="schedule-container">
                 <div className="schedule-header">
                     <h2>Schedule</h2>
@@ -135,6 +141,7 @@ const Schedule = () => {
                     </CarouselProvider> */}
                     </div>
             </div>
+            <ScheduleRight/>
         </main>
     )
 }
