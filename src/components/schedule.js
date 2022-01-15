@@ -128,7 +128,7 @@ const Schedule = () => {
                                 items={[
                                     {title: "Portfolio Reviews", time: "11:00 am - 1:00 pm"},
                                     {title: "Lunch Break", time: "1:00 pm - 2:00 pm"},
-                                    {title: "Alumni Panel", time: "2:00 pm - 3:15 pm"},
+                                    // {title: "Alumni Panel", time: "2:00 pm - 3:15 pm"},
                                     {title: "Expanding Horizons: New Mediums in Motion Media Panel", time: "3:15 pm - 5:00 pm"}]}/>
                             <ScheduleSlide
                                 sNumber={2}

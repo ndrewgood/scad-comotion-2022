@@ -1,0 +1,85 @@
+.attendees {
+    background: #291E39;
+
+    .attendeesGrid {
+        padding: 120px 0; 
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        margin: 0 auto;
+        width: 80vw;
+        max-width: 1200px;
+
+        .attendee {
+            width: 100%;
+            aspect-ratio: 1;
+            position: relative;
+
+            .holder {
+                width: 100%;
+                height: 100%;
+                background: #333;
+                z-index: 10;
+                position: absolute;
+                transition: all 500ms ease-in-out;
+            }
+
+            p {
+                z-index: 5;
+                position: absolute;
+                text-align: center;
+                bottom: 0;
+                margin: 0;
+                width: 100%;
+                height: 15%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                opacity: 0;
+                transition: all 300ms ease-in-out; 
+            }
+
+            .triangles {
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #444;
+
+                div {
+                    height: 100%;
+                    width: 100%;
+                    background: #777;
+                    position: absolute;
+                    top: 0;
+
+                    &.top {
+                        clip-path: polygon(0 0, 100% 0, 50% 50%);  
+                    }
+
+                    &.bottom {
+                        clip-path: polygon(0 100%, 100% 100%, 50% 50%);  
+                    }
+                }
+
+                
+            }
+
+            &:hover {
+                .holder {
+                    transform: scale(0.7);
+                    transition: all 500ms ease-in-out;
+                }
+                
+                p {
+                    opacity: 1;
+                    transition: all 300ms ease-in-out;
+                    transition-delay: 200ms;
+                }
+            }
+        }
+    }
+}
