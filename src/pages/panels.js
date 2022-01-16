@@ -23,6 +23,13 @@ const panels = [
     description: "SCAD Alumni will discuss life after college and navigating the workforce. We’ll explore the challenges and successes of their journeys and how they achieved their long and short-term goals. Panelists will discuss obtaining proper international work Visas, imposter syndrome, finding your footing in the industry, and learning when to say yes or no to a project."
   },
   {
+    title: "Alumni Panel",
+    speakers: "",
+    date: "February 26th",
+    time: "2:00pm - 3:15pm EST",
+    description: "SCAD Alumni will discuss life after college and navigating the workforce. We’ll explore the challenges and successes of their journeys and how they achieved their long and short-term goals. Panelists will discuss obtaining proper international work Visas, imposter syndrome, finding your footing in the industry, and learning when to say yes or no to a project."
+  },
+  {
     title: "Expanding Horizons: New Mediums in Motion Media",
     speakers: "",
     date: "February 26th",
@@ -35,13 +42,6 @@ const panels = [
     date: "February 27th",
     time: "2:00pm - 3:15pm EST",
     description: "With inspiration and art surrounding our lives, how can we make original work? In this panel, we will explore the prevalence of cliche, how panelists develop originality in their work, and what they did to enhance creativity. Panelists will provide insight on brainstorming, creating designs, and conceptualizing multimedia ideas when it seems everything has already been done"
-  },
-  {
-    title: "Alumni Panel",
-    speakers: "",
-    date: "February 26th",
-    time: "2:00pm - 3:15pm EST",
-    description: "SCAD Alumni will discuss life after college and navigating the workforce. We’ll explore the challenges and successes of their journeys and how they achieved their long and short-term goals. Panelists will discuss obtaining proper international work Visas, imposter syndrome, finding your footing in the industry, and learning when to say yes or no to a project."
   },
 ]
 
@@ -57,15 +57,19 @@ const PanelComponent = ({t, s, d, tm, ds}) => {
       <div className="top">
         <div className="tl">
           <div className="title">{t}</div>
+          <p className="time">{d}<br/>{tm}</p>
           <div className="speakers">{s}</div>
         </div>
         <div className="tr">
-          <p className="time">{d}<br/>{tm}</p>
+          <a className="disable">Watch Panel</a>
         </div>
       </div>
       <p className="description">
         {ds}
       </p>
+      <div className="bt">
+          <a className="disable">Watch Panel</a>
+        </div>
     </div>
   )
 }

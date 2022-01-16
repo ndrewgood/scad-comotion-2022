@@ -36,10 +36,10 @@ const FaqComponent = ({question, answer}) => {
 
 const FaqPage = () => (
   <Layout>
-    <Seo title="Home" />
+    <Seo title="FAQ - CoMotion 2022" />
     <Nav />
     <FaqHero />
-    <div style={{backgroundColor: "#FFDCDF", padding: "40px 0 80px"}}>
+    <div style={{backgroundColor: "#f4eedd", padding: "40px 0 80px"}}>
       <FaqComponent 
         question="Is CoMotion virtual or on-ground this year and where are livestreams hosted?"
         answer={[

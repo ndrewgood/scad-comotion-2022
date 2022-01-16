@@ -73,6 +73,10 @@ $nav-height: 80px;
   background-image: url("../assets/svg/hero/circle3.svg");
 }
 
+.circle4 {
+  background-image: url("../assets/svg/hero/circle4.svg");
+}
+
 @keyframes arrow {
   0% { transform: translateY(0px) }
   50% { transform: translateY(-3px) }

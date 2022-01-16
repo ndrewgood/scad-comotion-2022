@@ -7,8 +7,8 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import '../styles/hero.scss'
 
-import Logo from '../assets/images/hero/logoStill_update.png'
-import LogoAnimation from '../assets/videos/logoAnimation_final_v2-1.mp4'
+import Logo from '../assets/images/hero/logoStill_final.png'
+import LogoAnimation from '../assets/videos/logoAnimation_final.mp4'
 
 // https://stackoverflow.com/questions/45363008/how-can-i-detect-when-video-finished-playing-react 
 
@@ -36,7 +36,7 @@ const Balls = () => {
 
     const shapeNum = 20;
     const posLimit = 30;
-    const variations = ["circle1", "circle2", "circle3"];
+    const variations = ["circle1", "circle2", "circle3", "circle4"];
     const duration = 300;
 
     const mouse = useMousePosition();
@@ -148,11 +148,14 @@ const Balls = () => {
             vh: 11
         }
     ]
-      
+    
 
     const addBall = (fromMouseClick, section) => {
         if (fromMouseClick) {
-            if(mouse.x < size.width - posLimit && mouse.x > posLimit && mouse.y > posLimit && mouse.y < size.height - posLimit) {
+            if((mouse.x < (size.width/2)-(size.width/4)
+                || mouse.x > (size.width/2)+(size.width/4))
+                || (mouse.y < (size.height/2)-(size.height/4)
+                || mouse.y > (size.height/2)+(size.height/4))) {
                 let arr;
                 if (varList.length == 0) {
                     arr = [...variations]
@@ -161,6 +164,7 @@ const Balls = () => {
                 }
                 let rand = getRandomInt(arr.length - 1)
                 let randVar = arr[rand];
+                console.log(randVar);
                 arr.splice(rand, 1)
                 setVarList([...arr]);
 
@@ -214,14 +218,14 @@ const Balls = () => {
                         if (size.width/1920 < .5) {
                             mult = .5 * 0.7;
                         } else {
-                            mult = (size.width/1920) * 0.7;
+                            mult = (size.width/1920) * 0.8;
                         }
 
                         //cheeky lil pythagoras theorem moment here
                         var a = Math.abs(x - 50);
                         var b = Math.abs(y - 45);
                         var c = Math.sqrt( (a * a)*2 + ((b * b)*3) );
-                        let val = map_range(Math.floor(c), 0, 100, 0, 400) * mult;
+                        let val = map_range(Math.floor(c), 15, 100, 0, 400) * mult;
                         let z = Math.floor(200 + val);
                         let zString = z.toString();
 
