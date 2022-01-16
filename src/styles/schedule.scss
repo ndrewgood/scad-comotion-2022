@@ -88,18 +88,19 @@
             }
         }
     }
-}
-
-svg {
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    width: 22vw;
-
-    @media only screen and (max-width: 1200px) {
-        width: 17vw;
+    svg {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        width: 22vw;
+    
+        @media only screen and (max-width: 1200px) {
+            width: 17vw;
+        }
     }
 }
+
+
 
 #left {
     left: 10px;
