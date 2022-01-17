@@ -76,10 +76,12 @@ const PanelComponent = ({t, s, d, tm, ds}) => {
 }
 
 const PanelsPage = (props) => {
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 720);
+  const [isDesktop, setDesktop] = useState(typeof window !== 'undefined' ? window.innerWidth > 720 : 0);
 
   const updateMedia = () => {
-    setDesktop(window.innerWidth > 720);
+    if (typeof window !== 'undefined') {
+      setDesktop(window.innerWidth > 720);
+    }
   };
 
   useEffect(() => {
