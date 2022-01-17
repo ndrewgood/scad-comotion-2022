@@ -1,8 +1,9 @@
-import * as React from "react"
+import React, { useEffect, useState } from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Nav from '../components/nav'
+import MobileNav from '../components/mobileNav'
 import Footer from '../components/footer'
 
 import "../styles/attendees.scss"
@@ -24,29 +25,42 @@ const Attendee = props => {
 }
 
 
-const AttendeesPage = () => (
-  <Layout>
-    <Seo title="Attendees - CoMotion 2022" />
-    <Nav/>
-    <div className="attendeesHero faqHero-container" >
-      <h1>Attendees</h1>
-    </div>
-    <main className="attendees">
-      <div className="attendeesGrid">
-        <Attendee/>
-        <Attendee/>
-        <Attendee/>
-        <Attendee/>
-        <Attendee/>
-        <Attendee/>
-        <Attendee/>
-        <Attendee/>
-        <Attendee/>
-        <Attendee/>
+const AttendeesPage = () => {
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 720);
+
+  const updateMedia = () => {
+      setDesktop(window.innerWidth > 720);
+  };
+
+  useEffect(() => {
+      window.addEventListener("resize", updateMedia);
+      return () => window.removeEventListener("resize", updateMedia);
+  });
+
+  return(
+    <Layout>
+      <Seo title="Attendees - CoMotion 2022" />
+      {isDesktop ? <Nav /> : <MobileNav/>}
+      <div className="attendeesHero faqHero-container" >
+        <h1>Attendees</h1>
       </div>
-    </main>
-    <Footer/>
-  </Layout>
-)
+      <main className="attendees">
+        <div className="attendeesGrid">
+          <Attendee/>
+          <Attendee/>
+          <Attendee/>
+          <Attendee/>
+          <Attendee/>
+          <Attendee/>
+          <Attendee/>
+          <Attendee/>
+          <Attendee/>
+          <Attendee/>
+        </div>
+      </main>
+      <Footer/>
+    </Layout>
+  )
+}
 
 export default AttendeesPage

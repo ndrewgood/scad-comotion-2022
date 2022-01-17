@@ -1,12 +1,9 @@
-import * as React from "react"
-// import { Link } from "gatsby"
-// import { StaticImage } from "gatsby-plugin-image"
-
-
+import React, {useState, useEffect} from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Nav from "../components/nav"
+import MobileNav from '../components/mobileNav'
 import Hero from '../components/hero'
 import Schedule from "../components/schedule"
 import CtaGrid from "../components/ctaGrid"
@@ -24,17 +21,31 @@ const Description = () => (
   </main>
 )
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="SCAD CoMotion 2022" />
-    <Hero />
-    <Nav context="nav-index"/>
-    <Description />
-    <Schedule />
-    <CtaGrid />
-    <Footer />
-  </Layout>
-)
+const IndexPage = () => {
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 720);
+
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 720);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
+
+  return(
+    <Layout>
+      <Seo title="SCAD CoMotion 2022" />
+      {isDesktop ? null : <MobileNav context="nav-index"/>}
+      <Hero />
+      {isDesktop ? <Nav context="nav-index"/> : null}
+      <Description />
+      <Schedule />
+      <CtaGrid />
+      <Footer />
+    </Layout>
+  )
+}
 
 export default IndexPage
 

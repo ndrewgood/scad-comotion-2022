@@ -54,7 +54,15 @@ const Nav = ({context}) => {
                         <div className="box__face box__face--top">Schedule</div>
                         <div className="box__face box__face--bottom"></div>
                     </Link>
-                    <Link className="box bring-forward pattern-2" to="/faq">
+                    <Link className="box bring-forward pattern-2" to="/panels">
+                        <div className="box__face box__face--front">Panels</div>
+                        <div className="box__face box__face--back"></div>
+                        <div className="box__face box__face--right"></div>
+                        <div className="box__face box__face--left"></div>
+                        <div className="box__face box__face--top">Panels</div>
+                        <div className="box__face box__face--bottom"></div>
+                    </Link>
+                    <Link className="box bring-forward pattern-3" to="/faq">
                         <div className="box__face box__face--front">FAQ</div>
                         <div className="box__face box__face--back"></div>
                         <div className="box__face box__face--right"></div>
@@ -62,7 +70,7 @@ const Nav = ({context}) => {
                         <div className="box__face box__face--top">FAQ</div>
                         <div className="box__face box__face--bottom"></div>
                     </Link>
-                    <a className="box bring-back pattern-3" href="https://society6.com/momelove">
+                    <a className="box bring-back pattern-4" href="https://society6.com/momelove">
                         <div className="box__face box__face--front">Store</div>
                         <div className="box__face box__face--back"></div>
                         <div className="box__face box__face--right"></div>
@@ -73,21 +81,9 @@ const Nav = ({context}) => {
                     <div className="wall">
                         <div className="rightWall"></div>
                     </div>
-                    {/* <Link to="/">Schedule</Link>
-                    <Link to="/faq">FAQ</Link>
-                    <a href="https://society6.com/momelove">Store</a> */}
                 </div>
             </div>
         </nav>
-
-        // <nav className={"nav-container " + context}>
-        //     <Link to="/">Home</Link>
-        //     <div className="nav-right">
-        //         <Link to="/">Schedule</Link>
-        //         <Link to="/faq">FAQ</Link>
-        //         <a href="https://society6.com/momelove">Store</a>
-        //     </div>
-        // </nav>
     )
 }
 

@@ -1,8 +1,9 @@
-import * as React from "react"
+import React, { useEffect, useState } from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Nav from '../components/nav'
+import MobileNav from '../components/mobileNav'
 import Footer from '../components/footer'
 
 import '../styles/team.scss'
@@ -116,21 +117,34 @@ const TeamGrid = ({list}) => (
     </div>
 )
 
-const TeamPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <Nav />
-    <TeamHero />
-    <div className="team">
-        <div className="team-container">
-            <TeamHeader text="MOMELove Officers" color="orange"/>
-            <TeamGrid list={momeloveList} />
-            <TeamHeader text="Branding Team" color="orange"/>
-            <TeamGrid list={momeloveList} />
-        </div>
-    </div>
-    <Footer/>
-  </Layout>
-)
+const TeamPage = (props) => { 
+    const [isDesktop, setDesktop] = useState(window.innerWidth > 720);
+
+    const updateMedia = () => {
+        setDesktop(window.innerWidth > 720);
+    };
+
+    useEffect(() => {
+        window.addEventListener("resize", updateMedia);
+        return () => window.removeEventListener("resize", updateMedia);
+    });
+
+    return(
+        <Layout>
+            <Seo title="Home" />
+            {isDesktop ? <Nav /> : <MobileNav/>}
+            <TeamHero />
+            <div className="team">
+                <div className="team-container">
+                    <TeamHeader text="MOMELove Officers" color="orange"/>
+                    <TeamGrid list={momeloveList} />
+                    <TeamHeader text="Branding Team" color="orange"/>
+                    <TeamGrid list={momeloveList} />
+                </div>
+            </div>
+            <Footer/>
+        </Layout>
+    )
+}
 
 export default TeamPage

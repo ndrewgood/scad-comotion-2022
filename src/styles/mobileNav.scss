@@ -1,0 +1,73 @@
+.mobileNav {
+    z-index: 150;
+    display: flex;
+    flex-direction: row;
+    padding: 0 5vw;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+
+   .logoLink {
+        height: 60px;
+        justify-content: center;
+
+        img {
+            height: 60px;
+        }
+    }
+
+    .hamburger-holder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 48px;
+        width: 48px;
+        border: solid 2px #333;
+        border-radius: 8px;
+    }
+}
+
+.navItems {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 80px;
+    background-color: #f4eedd;
+    margin: 0;
+    padding: 0;
+
+    a {
+        text-decoration: none;
+
+        li {
+            padding: 0 5vw;
+            height: 80px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            font-family: "cairo";
+            font-size: 18px;
+            color: #291E39;
+
+            &.first {
+                border: outset 12px #FF8937;
+            }
+
+            &.second {
+                border: inset 12px #B0F1BF;
+            }
+
+            &.third {
+                border: outset 12px #60CBEE;
+            }
+
+            &.fourth {
+                border: inset 12px #D890EC;
+            }
+        }
+    }
+}
+    

@@ -1,8 +1,9 @@
-import * as React from "react"
+import React, {useEffect, useState} from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Nav from '../components/nav'
+import MobileNav from '../components/mobileNav'
 import Footer from '../components/footer'
 
 import '../styles/panels.scss'
@@ -74,11 +75,22 @@ const PanelComponent = ({t, s, d, tm, ds}) => {
   )
 }
 
-const PanelsPage = () => {
+const PanelsPage = (props) => {
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 720);
+
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 720);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
+
   return (
     <Layout>
       <Seo title="Panels - CoMotion 2022" />
-      <Nav />
+      {isDesktop ? <Nav /> : <MobileNav/>}
       <PanelsHero />
       <div id="panels">
         <div id="keynote">
