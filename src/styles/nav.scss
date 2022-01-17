@@ -8,6 +8,9 @@ nav {
     &.sticky {
         border-bottom: 3px solid #ccc;
     }
+    @media only screen and (max-width: 720px) {
+        display: none;
+    }
 }
 
 .nav-container {

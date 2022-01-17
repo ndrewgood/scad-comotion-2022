@@ -26,23 +26,11 @@ const Attendee = props => {
 
 
 const AttendeesPage = () => {
-  const [isDesktop, setDesktop] = useState(typeof window !== 'undefined' ? window.innerWidth > 720 : 0);
-
-  const updateMedia = () => {
-    if (typeof window !== 'undefined') {
-      setDesktop(window.innerWidth > 720);
-    }
-  };
-
-  useEffect(() => {
-      window.addEventListener("resize", updateMedia);
-      return () => window.removeEventListener("resize", updateMedia);
-  });
-
   return(
     <Layout>
       <Seo title="Attendees - CoMotion 2022" />
-      {isDesktop ? <Nav /> : <MobileNav/>}
+      <Nav />
+      <MobileNav/>
       <div className="attendeesHero faqHero-container" >
         <h1>Attendees</h1>
       </div>

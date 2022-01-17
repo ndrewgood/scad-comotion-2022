@@ -76,23 +76,11 @@ const PanelComponent = ({t, s, d, tm, ds}) => {
 }
 
 const PanelsPage = (props) => {
-  const [isDesktop, setDesktop] = useState(typeof window !== 'undefined' ? window.innerWidth > 720 : 0);
-
-  const updateMedia = () => {
-    if (typeof window !== 'undefined') {
-      setDesktop(window.innerWidth > 720);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
-  });
-
   return (
     <Layout>
       <Seo title="Panels - CoMotion 2022" />
-      {isDesktop ? <Nav /> : <MobileNav/>}
+      <Nav />
+      <MobileNav/>
       <PanelsHero />
       <div id="panels">
         <div id="keynote">

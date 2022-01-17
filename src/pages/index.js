@@ -22,25 +22,13 @@ const Description = () => (
 )
 
 const IndexPage = () => {
-  const [isDesktop, setDesktop] = useState(typeof window !== 'undefined' ? window.innerWidth > 720 : 0);
-
-  const updateMedia = () => {
-    if (typeof window !== 'undefined') {
-      setDesktop(window.innerWidth > 720);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
-  });
 
   return(
     <Layout>
       <Seo title="SCAD CoMotion 2022" />
-      {isDesktop ? null : <MobileNav context="nav-index"/>}
+      <MobileNav context="nav-index"/>
       <Hero />
-      {isDesktop ? <Nav context="nav-index"/> : null}
+      <Nav context="nav-index"/>
       <Description />
       <Schedule />
       <CtaGrid />

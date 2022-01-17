@@ -1,6 +1,6 @@
 .mobileNav {
     z-index: 150;
-    display: flex;
+
     flex-direction: row;
     padding: 0 5vw;
     margin: 0 auto;
@@ -26,6 +26,11 @@
         border: solid 2px #333;
         border-radius: 8px;
     }
+    display: none;
+    @media only screen and (max-width: 720px) {
+        display: flex;
+    }
+
 }
 
 .navItems {
@@ -68,6 +73,10 @@
                 border: inset 12px #D890EC;
             }
         }
+    }
+    display: none;
+    @media only screen and (max-width: 720px) {
+        display: block;
     }
 }
     

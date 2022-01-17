@@ -118,23 +118,11 @@ const TeamGrid = ({list}) => (
 )
 
 const TeamPage = (props) => { 
-    const [isDesktop, setDesktop] = useState(typeof window !== 'undefined' ? window.innerWidth > 720 : 0);
-
-    const updateMedia = () => {
-      if (typeof window !== 'undefined') {
-        setDesktop(window.innerWidth > 720);
-      }
-    };
-
-    useEffect(() => {
-        window.addEventListener("resize", updateMedia);
-        return () => window.removeEventListener("resize", updateMedia);
-    });
-
     return(
         <Layout>
             <Seo title="Home" />
-            {isDesktop ? <Nav /> : <MobileNav/>}
+            <Nav />
+            <MobileNav/>
             <TeamHero />
             <div className="team">
                 <div className="team-container">
