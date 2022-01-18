@@ -21,7 +21,7 @@ const panels = [
     speakers: "",
     date: "February 25th",
     time: "4:00pm - 5:00pm EST",
-    description: "SCAD Alumni will discuss life after college and navigating the workforce. We’ll explore the challenges and successes of their journeys and how they achieved their long and short-term goals. Panelists will discuss obtaining proper international work Visas, imposter syndrome, finding your footing in the industry, and learning when to say yes or no to a project."
+    description: "How does a student-only team create a comprehensive event branding package? On this panel, the 9 team leads come together and explain the ins-and-outs of this year’s creation process. Students will discuss creative development, adapting the design for different deliverables, how to communicate in a hybrid setting, and what they learned as a team."
   },
   {
     title: "Alumni Panel",
