@@ -11,7 +11,7 @@
             grid-template-columns: repeat(5, 1fr);
         }
 
-        @media only screen and (max-width: 900px) {
+        @media only screen and (max-width: 800px) {
             grid-template-columns: repeat(3, 1fr);
         }
 
