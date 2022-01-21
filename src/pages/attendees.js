@@ -54,7 +54,7 @@ import "../styles/attendees.scss"
 const Attendee = props => {
   console.log(props.logo)
   return(
-    <a href={props.link} className="attendee">
+    <a href={props.link} target="_blank" className="attendee">
       <div className="holder">
         <img src={props.logo} alt={props.name}/>
       </div>
@@ -73,212 +73,212 @@ const AttendeesPage = () => {
     {
       name: '1stAveMachine',
       logo: FirstAveMachine,
-      link: ""
+      link: "https://www.1stavemachine.com"
     },
     {
       name: 'Aligned Media',
       logo: AlignedMedia,
-      link: ""
+      link: "https://www.alignedmedia.com/"
     },
     {
       name: 'All Of It Now',
       logo: AllOfItNow,
-      link: ""
+      link: "https://allofitnow.com/"
     },
     {
       name: 'Antidote Studio',
       logo: AntidoteStudio,
-      link: ""
+      link: "https://antidotestudio.tv"
     },
     {
       name: 'Awesome, Inc.',
       logo: AwesomeInc,
-      link: ""
+      link: "https://www.awesomeinc.com/"
     },
     {
       name: 'Black Math',
       logo: BlackMath,
-      link: ""
+      link: "https://blackmath.com/"
     },
     {
       name: 'Block and Tackle',
       logo: Blockntackle,
-      link: ""
+      link: "https://www.blockandtackle.tv"
     },
     {
       name: 'Brand New School (LA&NY)',
       logo: Brandnewschool,
-      link: ""
+      link: "https://brandnewschool.com/"
     },
     {
       name: 'Buck',
       logo: Buck,
-      link: ""
+      link: "https://buck.co/"
     },
     {
       name: 'Charlie Company',
       logo: Charlieco,
-      link: ""
+      link: "http://www.charlieco.tv"
     },
     {
       name: 'Cycymymy',
       logo: Cycymymy,
-      link: ""
+      link: "https://www.cycymymy.com"
     },
     {
       name: 'Dash',
       logo: Dash,
-      link: ""
+      link: "https://www.dashstudio.net"
     },
     {
       name: 'Eido',
       logo: Eido,
-      link: ""
+      link: "https://www.eido.net"
     },
     {
       name: 'Envoy',
       logo: EnvoySquare,
-      link: ""
+      link: "https://www.weareenvoy.com/"
     },
     {
       name: 'Fern',
       logo: Fern,
-      link: ""
+      link: "https://www.fern.team"
     },
     {
       name: 'Fivestone Studios',
       logo: Fivestone,
-      link: ""
+      link: "https://fivestonestudios.com/"
     },
     {
       name: 'Framestore',
       logo: Framestore,
-      link: ""
+      link: "https://www.framestore.com/?language=en"
     },
     {
       name: 'Gareso',
       logo: Gareso,
-      link: ""
+      link: "https://gareso.com/"
     },
     {
       name: 'Giant Ant',
       logo: GiantAnt,
-      link: ""
+      link: "https://www.giantant.ca/"
     },
     {
       name: 'Golden Wolf',
       logo: GoldenWolf,
-      link: ""
+      link: "https://goldenwolf.tv/"
     },
     {
       name: 'Gretel',
       logo: Gretel,
-      link: ""
+      link: "https://gretelny.com"
     },
     {
       name: 'Gunner',
       logo: Gunner,
-      link: ""
+      link: "https://www.gunner.work"
     },
     {
       name: 'Hobbes',
       logo: Hobbes,
-      link: ""
+      link: "https://hobbes.work/"
     },
     {
       name: 'Hue & Cry',
       logo: HueNCry,
-      link: ""
+      link: "https://www.hueandcry.tv"
     },
     {
       name: 'Identity Visuals',
       logo: IdentityVisuals,
-      link: ""
+      link: "https://iv.studio"
     },
     {
       name: 'Laundry',
       logo: Laundry,
-      link: ""
+      link: "https://www.laundrymat.tv"
     },
     {
       name: 'Lucid',
       logo: Lucid,
-      link: ""
+      link: "https://lucid.fyi/"
     },
     {
       name: 'Meister',
       logo: Meister,
-      link: ""
+      link: "https://meister.tv/"
     },
     {
       name: 'Meptik',
       logo: Meptik,
-      link: ""
+      link: "https://www.meptik.com"
     },
     {
       name: 'NEXT/NOW',
       logo: NextNow,
-      link: ""
+      link: "https://nextnowagency.com/"
     },
     {
       name: 'Psyop',
       logo: Psyop,
-      link: ""
+      link: "https://www.psyop.com/"
     },
     {
       name: 'Ravie',
       logo: Ravie,
-      link: ""
+      link: "https://www.ravie.co/"
     },
     {
       name: 'Sarofsky',
       logo: Sarofsky,
-      link: ""
+      link: "https://www.sarofsky.com/"
     },
     {
       name: 'Scholar',
       logo: Scholar,
-      link: ""
+      link: "https://www.helloscholar.com/"
     },
     {
       name: 'Sibling Rivalry',
       logo: SiblingRivalry,
-      link: ""
+      link: "https://siblingrivalry.com/"
     },
     {
       name: 'SMT Creative Studio',
       logo: Smt,
-      link: ""
+      link: "https://www.smt.com/"
     },
     {
       name: 'Snowday',
       logo: Snowday,
-      link: ""
+      link: "https://www.snowday.studio/"
     },
     {
       name: 'StateDesign',
       logo: State,
-      link: ""
+      link: "http://statedesign.tv"
     },
     {
       name: 'The Mill',
       logo: TheMill,
-      link: ""
+      link: "https://www.themill.com"
     },
     {
       name: 'The New Blank',
       logo: TheNewBlank,
-      link: ""
+      link: "https://thenewblank.com"
     },
     {
       name: 'Trollbäck',
       logo: TrollBack,
-      link: ""
+      link: "https://trollback.com"
     },
     {
       name: 'Weber Shandwick',
       logo: WeberShandwick,
-      link: ""
+      link: "https://www.webershandwick.com/"
     }
   ]
 
