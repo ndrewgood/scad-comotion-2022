@@ -48,7 +48,7 @@
                 background: #291E39;
                 z-index: 10;
                 position: absolute;
-                transition: all 500ms ease-in-out;
+                transition: all 400ms ease-in-out;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -56,7 +56,7 @@
                 img {
                     height: 65%;
                     opacity: 0.6;
-                    transition: all 400ms ease-in-out;
+                    transition: all 300ms ease-in-out;
                 }
             }
 
@@ -110,12 +110,12 @@
             &:hover {
                 .holder {
                     transform: scale(0.7);
-                    transition: all 500ms ease-in-out;
+                    transition: all 400ms ease-in-out;
                     background: #513C6F;
 
                     img {
                         opacity: 1;
-                        transition: all 400ms ease-in-out;
+                        transition: all 300ms ease-in-out;
                     }
                 }
                 
