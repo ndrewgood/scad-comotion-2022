@@ -27,7 +27,7 @@
         border-radius: 8px;
     }
     display: none;
-    @media only screen and (max-width: 720px) {
+    @media only screen and (max-width: 760px) {
         display: flex;
     }
 
@@ -72,10 +72,14 @@
             &.fourth {
                 border: inset 12px #D890EC;
             }
+
+            &.fifth {
+                border: outset 12px #FF8937;
+            }
         }
     }
     display: none;
-    @media only screen and (max-width: 720px) {
+    @media only screen and (max-width: 760px) {
         display: block;
     }
 }

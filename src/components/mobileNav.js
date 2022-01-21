@@ -27,11 +27,11 @@ const transitionStyles = {
     },
   exiting:  { 
     //   opacity: 0,
-      transform: "translateY(-320px)" 
+      transform: "translateY(-480px)" 
     },
   exited:  { 
     //   opacity: 0,
-      transform: "translateY(-320px)"
+      transform: "translateY(-480px)"
     },
 };
 
@@ -58,9 +58,10 @@ const MobileNav = ({context}) => {
                 {state => (
                     <ul className="navItems" style={{ ...defaultStyle, ...transitionStyles[state]}}>
                         <Link to="/#schedule"><li className='first'>Schedule</li></Link>
-                        <Link to="/panels"><li className='second'>Panels</li></Link>
-                        <Link to="/faq"><li className='third'>FAQ</li></Link>
-                        <a href="https://society6.com/momelove"><li className='fourth'>Store</li></a>
+                        <Link to="/attendees"><li className='second'>attendees</li></Link>
+                        <Link to="/panels"><li className='third'>Panels</li></Link>
+                        <Link to="/faq"><li className='fourth'>FAQ</li></Link>
+                        <a href="https://society6.com/momelove"><li className='fifth'>Store</li></a>
                     </ul>
                 )}
             </Transition>   

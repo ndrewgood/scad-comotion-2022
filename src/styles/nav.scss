@@ -8,7 +8,7 @@ nav {
     &.sticky {
         border-bottom: 3px solid #ccc;
     }
-    @media only screen and (max-width: 720px) {
+    @media only screen and (max-width: 760px) {
         display: none;
     }
 }
@@ -154,6 +154,10 @@ nav {
     z-index: 50;
 }
 
+.bring-front {
+    z-index: 100;
+}
+
 .bring-back {
     z-index: 30;
 }
@@ -177,8 +181,8 @@ nav {
 .box__face--right { transform: rotateY( 90deg) translateZ(60px); }
 .box__face--left  { transform: rotateY(-90deg) translateZ(60px); }
 
-.rightWall { transform: rotateY( 90deg) translateZ(240px); }
-.leftWall  { transform: rotateY(-90deg) translateZ(240px); }
+.rightWall { transform: rotateY( 90deg) translateZ(300px); }
+.leftWall  { transform: rotateY(-90deg) translateZ(300px); }
 
 .box__face--top    { transform: rotateX( 90deg) translateZ(40px); }
 .box__face--bottom { transform: rotateX(-90deg) translateZ(40px); }
