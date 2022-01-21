@@ -17,7 +17,8 @@
 
         .attendee {
             width: 100%;
-            aspect-ratio: 1;
+            padding-bottom: 100%;
+            //aspect-ratio: 1;
             position: relative;
 
             &:nth-child(even) {
