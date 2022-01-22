@@ -9,11 +9,11 @@ const CtaGrid = () => {
         <main className="ctaGrid">
             <div className="ctaGrid-container">
                 <Link to="/attendees" className="cta bg3"><p>Attendees Page</p></Link>
-                <Link to="/panels" className="cta bg1"><p>Panels Page</p></Link>
+                <Link to="/faq" className="cta bg1"><p>FAQ Page</p></Link>
             </div>
-            <div className="ctaGrid-container oneitem">
+            {/* <div className="ctaGrid-container oneitem">
                 <Link to="/faq" className="cta bg2"><p>FAQ Page</p></Link>
-            </div>
+            </div> */}
 
         </main>
     )
