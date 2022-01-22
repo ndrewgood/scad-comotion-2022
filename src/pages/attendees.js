@@ -47,6 +47,7 @@ import State from '../assets/images/attendees/state.png'
 import TheMill from '../assets/images/attendees/themill.png'
 import TheNewBlank from '../assets/images/attendees/thenewblank.png'
 import TrollBack from '../assets/images/attendees/trollback.png'
+import Tencent from '../assets/images/attendees/lightspeed_quantumstudio.png'
 import WeberShandwick from '../assets/images/attendees/webershandwick.png'
 
 import "../styles/attendees.scss"
@@ -269,6 +270,11 @@ const AttendeesPage = () => {
       name: 'The New Blank',
       logo: TheNewBlank,
       link: "https://thenewblank.com"
+    },
+    {
+      name: 'Tencent',
+      logo: Tencent,
+      link: "https://www.lqstudios.com/"
     },
     {
       name: 'Trollbäck',
