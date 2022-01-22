@@ -106,7 +106,7 @@ nav {
     transform: translateZ(-40px);
     height: 80px;
     width: 80px;
-    // transform-style: preserve-3d;
+    transform-style: preserve-3d;
     position: absolute;
     left: calc(50% - 40px);
 }
@@ -181,8 +181,8 @@ nav {
 .box__face--right { transform: rotateY( 90deg) translateZ(60px); }
 .box__face--left  { transform: rotateY(-90deg) translateZ(60px); }
 
-.rightWall { transform: rotateY( 90deg) translateZ(300px); }
-.leftWall  { transform: rotateY(-90deg) translateZ(300px); }
+.rightWall { transform: rotateY( 90deg) translateZ(240px); }
+.leftWall  { transform: rotateY(-90deg) translateZ(240px); }
 
 .box__face--top    { transform: rotateX( 90deg) translateZ(40px); }
 .box__face--bottom { transform: rotateX(-90deg) translateZ(40px); }
