@@ -214,7 +214,7 @@ const brandingList = [
         color: "pink"
     },
     {
-        name: "Greg Markan",
+        name: "Greg Markman",
         role: "Animator",
         port: "www.wowgreg.cool",
         pic: greg,
