@@ -93,7 +93,7 @@ const momeloveList = [
     {
         name: "Claire Lin",
         role: "Officer",
-        port: "",
+        port: "www.theclairelin.com",
         pic: claire,
         color: "blue"
     },
