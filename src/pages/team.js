@@ -113,7 +113,7 @@ const momeloveList = [
         color: "blue"
     },
     {
-        name: "Aiden Carney",
+        name: "Aidan Carney",
         role: "Officer",
         port: "www.aidancarneydesign.com/",
         pic: aidan,

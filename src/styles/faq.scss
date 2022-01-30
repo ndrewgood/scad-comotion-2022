@@ -1,14 +1,14 @@
 .faqHero-container {
     width: 100vw;
     height: 300px;
-    background-image: url("../assets/svg/banners/heroFAQ.svg");
+    background-image: url("../assets/images/banners/heroFAQ.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     text-align: center;
     @media only screen and (max-width: 600px) {
-        height: 220px;
+        height: 150px;
     }
     h1 {
         font-family: "Cairo", sans-serif;
@@ -17,7 +17,9 @@
         color: white;
     }
     @media only screen and (max-width: 600px) {
-        font-size: 0.9rem;
+        h1 {
+            font-size: 1.5rem !important;
+        }
     }
 
 }

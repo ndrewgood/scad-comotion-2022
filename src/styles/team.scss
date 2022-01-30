@@ -3,7 +3,7 @@
 .teamHero-container {
     width: 100vw;
     height: 300px;
-    background-image: url("../assets/svg/banners/heroTeam.svg");
+    background-image: url("../assets/images/banners/heroTeam.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -16,7 +16,10 @@
         color: #291E39;
     }
     @media only screen and (max-width: 600px) {
-        height: 220px;
+        height: 150px;
+        h1 {
+            font-size: 1.5rem !important;
+        }
     }
 
 }
