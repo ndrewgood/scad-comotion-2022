@@ -1,17 +1,23 @@
 .faqHero-container {
     width: 100vw;
     height: 300px;
-    background-image: url("../assets/svg/panels/dirHero1.svg");
+    background-image: url("../assets/svg/banners/heroFAQ.svg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     text-align: center;
+    @media only screen and (max-width: 600px) {
+        height: 220px;
+    }
     h1 {
         font-family: "Cairo", sans-serif;
         font-weight: 600;
         margin: auto;
         color: white;
+    }
+    @media only screen and (max-width: 600px) {
+        font-size: 0.9rem;
     }
 
 }
@@ -29,9 +35,12 @@
         // margin: auto;
         // width: 300px;
         margin-bottom: -30px;
+
         p {
+            font-family: Cairo, sans-serif !important;
             color: #352086;
             font-size: 1.6rem;
+            line-height: 2.2rem;
             // text-align: center;
             font-weight: 600;
 

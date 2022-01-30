@@ -41,6 +41,7 @@ import riley from '../assets/images/team/branding/riley.png'
 import krista from '../assets/images/team/branding/krista.png'
 import yuwei from '../assets/images/team/branding/yuwei.png'
 import isabella from '../assets/images/team/branding/isabella.png'
+import temp from '../assets/images/team/branding/temp.png'
 
 import alyssa_m from '../assets/images/team/momelove/alyssa_m.png'
 import antara_mome from '../assets/images/team/momelove/antara_mome.png'
@@ -351,6 +352,20 @@ const brandingList = [
         role: "Experiential",
         port: "priscillartistry.wixsite.com/priscillaquek",
         pic: priscilla,
+        color: "pink"
+    },
+    {
+        name: "Michael Karaman",
+        role: "Sound Design",
+        port: "mikesmotions.com",
+        pic: michael,
+        color: "pink"
+    },
+    {
+        name: "Alywn Tay",
+        role: "Sound Design",
+        port: "https://www.behance.net/wynmp3",
+        pic: temp,
         color: "pink"
     },
 ]

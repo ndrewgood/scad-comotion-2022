@@ -3,7 +3,7 @@
 .teamHero-container {
     width: 100vw;
     height: 300px;
-    background-image: url("../assets/svg/team/teamHero.svg");
+    background-image: url("../assets/svg/banners/heroTeam.svg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -13,7 +13,10 @@
         font-family: "Cairo", sans-serif;
         font-weight: 600;
         margin: auto;
-        color: white;
+        color: #291E39;
+    }
+    @media only screen and (max-width: 600px) {
+        height: 220px;
     }
 
 }
@@ -121,12 +124,12 @@
                 font-weight: 600;
                 font-size: 1.4rem;
                 line-height: 1.6rem;
-                color: black;
+                color: #291E39;
                 transition: .3s;
 
             }
             p {
-                color: black;
+                color: #291E39;
                 font-size: 1.1rem;
                 opacity: .5;
                 margin-top: 0px;

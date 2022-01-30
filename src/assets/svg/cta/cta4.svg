@@ -1,0 +1,24 @@
+<svg width="600" height="300" viewBox="0 0 600 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_428_1979)">
+<rect width="600" height="300" transform="matrix(-1 0 0 1 600 0)" fill="url(#paint0_linear_428_1979)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-70.6201 166.367L604.748 323.045L605.878 318.174L-69.4902 161.497L-70.6201 166.367Z" fill="black" fill-opacity="0.16"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-57.7128 152.614L624.347 217.822L624.218 212.863L-57.8423 147.655L-57.7128 152.614Z" fill="black" fill-opacity="0.16"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-32.0703 -1.31049L649.99 63.8975L649.861 58.9385L-32.1997 -6.26946L-32.0703 -1.31049Z" fill="black" fill-opacity="0.16"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-94.7911 274.074L596.295 353.6L596.265 348.651L-94.8214 269.126L-94.7911 274.074Z" fill="black" fill-opacity="0.16"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-41.4473 7.29108L629.147 184.563L630.477 179.738L-40.1178 2.46659L-41.4473 7.29108Z" fill="black" fill-opacity="0.16"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-58.7031 140.728L616.665 297.406L617.795 292.535L-57.5732 135.857L-58.7031 140.728Z" fill="#F4CDFF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-45.7959 126.975L636.264 192.183L636.135 187.224L-45.9253 122.016L-45.7959 126.975Z" fill="#F4CDFF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-20.1533 -26.9496L661.907 38.2584L661.778 33.2994L-20.2827 -31.9086L-20.1533 -26.9496Z" fill="#F4CDFF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-82.8741 248.435L608.212 327.961L608.182 323.012L-82.9044 243.487L-82.8741 248.435Z" fill="#F4CDFF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-29.5304 -18.3481L641.064 158.923L642.394 154.099L-28.2008 -23.1726L-29.5304 -18.3481Z" fill="#F4CDFF"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_428_1979" x1="18.0446" y1="109.423" x2="669.169" y2="222.552" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EBAFFC"/>
+<stop offset="1" stop-color="#D890EC"/>
+</linearGradient>
+<clipPath id="clip0_428_1979">
+<rect width="600" height="300" fill="white" transform="matrix(-1 0 0 1 600 0)"/>
+</clipPath>
+</defs>
+</svg>

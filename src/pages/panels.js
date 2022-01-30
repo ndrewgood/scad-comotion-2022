@@ -47,7 +47,7 @@ const panels = [
 ]
 
 const PanelsHero = () => (
-  <main className="faqHero-container">
+  <main className="faqHero-container panelsHero">
     <h1>Panels</h1>
   </main>
 )
