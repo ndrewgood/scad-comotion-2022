@@ -5,10 +5,10 @@ nav {
     z-index: 100;
     top: 0px;
 
-    &.sticky {
-        border-bottom: 3px solid #ccc;
-    }
-    @media only screen and (max-width: 760px) {
+    // &.sticky {
+    //     border-bottom: 3px solid #ccc;
+    // }
+    @media only screen and (max-width: 840px) {
         display: none;
     }
 }
@@ -20,6 +20,10 @@ nav {
     
     display: flex;
     justify-content: center;
+
+    @media only screen and (max-width: 1100px) {
+        width: 90vw;
+    }
 }
 
 .homeLink {
@@ -48,7 +52,7 @@ nav {
     background-color: #d6d2c1;
     display: flex;
     flex-direction: row;
-    perspective: 200px;
+    perspective: 300px;
     transition: all 450ms ease-in-out;
 
     a {
@@ -73,31 +77,42 @@ nav {
     }
 
     &.pattern-1 {
-        .box__face--top  { 
+        .box__face--top { 
             background: url(../assets/images/nav/navbg1.png); 
             background-size: cover;
         }
+
+        // .box__face--front  { 
+        //     background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../assets/images/nav/navbg1.png);
+        //     background-size: cover;
+        //     box-sizing: border-box;
+        // }
     }
 
     &.pattern-2 {
-        .box__face--top  { 
+        .box__face--top { 
             background: url(../assets/images/nav/navbg2.png); 
             background-size: cover;
         }
+
+        // .box__face--front  { 
+        //     background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../assets/images/nav/navbg2.png);
+        //     background-size: cover;
+        //     box-sizing: border-box;
+        // }
     }
 
     &.pattern-3 {
-        .box__face--top  { 
+        .box__face--top { 
             background: url(../assets/images/nav/navbg3.png); 
             background-size: cover;
         }
-    }
 
-    &.pattern-4 {
-        .box__face--top  { 
-            background: url(../assets/images/nav/navbg1.png); 
-            background-size: cover;
-        }
+        // .box__face--front  { 
+        //     background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../assets/images/nav/navbg3.png);
+        //     background-size: cover;
+        //     box-sizing: border-box;
+        // }
     }
 }
 
@@ -181,8 +196,8 @@ nav {
 .box__face--right { transform: rotateY( 90deg) translateZ(60px); }
 .box__face--left  { transform: rotateY(-90deg) translateZ(60px); }
 
-.rightWall { transform: rotateY( 90deg) translateZ(240px); }
-.leftWall  { transform: rotateY(-90deg) translateZ(240px); }
+.rightWall { transform: rotateY( 90deg) translateZ(360px); }
+.leftWall  { transform: rotateY(-90deg) translateZ(360px); }
 
 .box__face--top    { transform: rotateX( 90deg) translateZ(40px); }
 .box__face--bottom { transform: rotateX(-90deg) translateZ(40px); }

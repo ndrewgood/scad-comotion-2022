@@ -27,7 +27,7 @@
         border-radius: 8px;
     }
     display: none;
-    @media only screen and (max-width: 760px) {
+    @media only screen and (max-width: 840px) {
         display: flex;
     }
 
@@ -79,7 +79,7 @@
         }
     }
     display: none;
-    @media only screen and (max-width: 760px) {
+    @media only screen and (max-width: 840px) {
         display: block;
     }
 }

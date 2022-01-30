@@ -62,20 +62,28 @@ const Nav = ({context}) => {
                         <div className="box__face box__face--top">Attendees</div>
                         <div className="box__face box__face--bottom"></div>
                     </Link>
-                    {/* <Link className="box bring-front pattern-3" to="/panels">
+                    <Link className="box bring-front pattern-3" to="/panels">
                         <div className="box__face box__face--front">Panels</div>
                         <div className="box__face box__face--back"></div>
                         <div className="box__face box__face--right"></div>
                         <div className="box__face box__face--left"></div>
                         <div className="box__face box__face--top">Panels</div>
                         <div className="box__face box__face--bottom"></div>
-                    </Link> */}
-                    <Link className="box bring-forward pattern-4" to="/faq">
+                    </Link>
+                    <Link className="box bring-front pattern-1" to="/faq">
                         <div className="box__face box__face--front">FAQ</div>
                         <div className="box__face box__face--back"></div>
                         <div className="box__face box__face--right"></div>
                         <div className="box__face box__face--left"></div>
                         <div className="box__face box__face--top">FAQ</div>
+                        <div className="box__face box__face--bottom"></div>
+                    </Link>
+                    <Link className="box bring-forward pattern-2" to="/team">
+                        <div className="box__face box__face--front">Team</div>
+                        <div className="box__face box__face--back"></div>
+                        <div className="box__face box__face--right"></div>
+                        <div className="box__face box__face--left"></div>
+                        <div className="box__face box__face--top">Team</div>
                         <div className="box__face box__face--bottom"></div>
                     </Link>
                     <a className="box bring-back pattern-3" href="https://society6.com/momelove">
