@@ -203,7 +203,7 @@ const brandingList = [
     {
         name: "Wanyi Ma",
         role: "Animator",
-        port: "maviswanyima.myportfolio.com/work",
+        port: "wanyima.com",
         pic: wanyi,
         color: "pink"
     },
