@@ -42,6 +42,7 @@ import krista from '../assets/images/team/branding/krista.png'
 import yuwei from '../assets/images/team/branding/yuwei.png'
 import isabella from '../assets/images/team/branding/isabella.png'
 import temp from '../assets/images/team/branding/temp.png'
+import alywn from '../assets/images/team/branding/alywn.png'
 
 import alyssa_m from '../assets/images/team/momelove/alyssa_m.png'
 import antara_mome from '../assets/images/team/momelove/antara_mome.png'
@@ -245,7 +246,7 @@ const brandingList = [
     {
         name: "Brenda Chen",
         role: "Animator",
-        port: "vimeo.com/user90426107",
+        port: "www.brendaxuecongchen.com",
         pic: brenda,
         color: "pink"
     },
@@ -364,8 +365,8 @@ const brandingList = [
     {
         name: "Alywn Tay",
         role: "Sound Design",
-        port: "https://www.behance.net/wynmp3",
-        pic: temp,
+        port: "www.behance.net/wynmp3",
+        pic: alywn,
         color: "pink"
     },
 ]
@@ -418,7 +419,123 @@ const volunteerList = [
         role: "",
         port: "meghnashourie.myportfolio.com/work",
         color: "blue"
-    }
+    },
+    {
+        name: "Tyler Ferrel",
+        role: "",
+        port: "mailto:tydeferrell@gmail.com",
+        color: "blue"
+    },
+    {
+        name: "Harshitha Suresh",
+        role: "",
+        port: "www.shadeyartist.com",
+        color: "blue"
+    },
+    {
+        name: "Jessica Liou",
+        role: "",
+        port: "www.behance.net/huahua870204fa",
+        color: "blue"
+    },
+    {
+        name: "Nicole Lin",
+        role: "",
+        port: "nicolelinnn.com",
+        color: "blue"
+    },
+    {
+        name: "Andrew Botkin",
+        role: "",
+        port: "",
+        color: "blue"
+    },
+    {
+        name: "Sophia D'Alleva",
+        role: "",
+        port: "",
+        color: "blue"
+    },
+    {
+        name: "Erin O'Donnell",
+        role: "",
+        port: "www.erinodonnelldesign.com",
+        color: "blue"
+    },
+    {
+        name: "Stephanie Sandoval",
+        role: "",
+        port: "",
+        color: "blue"
+    },
+    {
+        name: "Libby Nett",
+        role: "",
+        port: "libbynett.wixsite.com/my-site-1",
+        color: "blue"
+    },
+    {
+        name: "Ningfeng He",
+        role: "",
+        port: "feng.squarespace.com",
+        color: "blue"
+    },
+    {
+        name: "Hannah Berastegui",
+        role: "",
+        port: "www.hannahberastegui.com",
+        color: "blue"
+    },
+    {
+        name: "Colin Horvath",
+        role: "",
+        port: "www.colinhorvath.xyz",
+        color: "blue"
+    },
+    {
+        name: "Ken Hsu",
+        role: "",
+        port: "www.behance.net/ken2208243f543/projects",
+        color: "blue"
+    },
+    {
+        name: "Hsi Ming Wang (Peter)",
+        role: "",
+        port: "hsimingwang.myportfolio.com/home",
+        color: "blue"
+    },
+    {
+        name: "Marisa Rowan",
+        role: "",
+        port: "www.marisarowan.com/",
+        color: "blue"
+    },
+    {
+        name: "Sonyue Li",
+        role: "",
+        port: "www.marisarowan.com/",
+        color: "blue"
+    },
+    {
+        name: "Mengda Li",
+        role: "",
+        port: "www.alpacaillu.com",
+        color: "blue"
+    },
+    {
+        name: "Yining Li",
+        role: "",
+        port: "yiningli.com/",
+        color: "blue"
+    },
+    {
+        name: "Susanna Tung",
+        role: "",
+        port: "",
+        color: "blue"
+    },
+    
+    
 ]
 
 const TeamHero = () => (
