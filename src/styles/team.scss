@@ -115,6 +115,10 @@
                 border: 12px inset #F3CAFF;
                 margin: auto !important;
                 transition: .3s;
+
+                @media only screen and (max-width: 850px) {
+                    width: auto;
+                }
             }
             h3, p {
                 margin-block-start: 0em;
@@ -143,6 +147,7 @@
                         border-width: 23px !important;
                         width: 153px;
                     }
+
                     h3 {
                         margin-top: 17px;
                     }
