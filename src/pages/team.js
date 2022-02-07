@@ -64,7 +64,7 @@ export const query = graphql`
             id
             relativePath
             childImageSharp {
-              gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 80, formats: [WEBP])
+              gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 80, formats: [WEBP], height: 300)
             }
           }
         }
@@ -75,7 +75,7 @@ export const query = graphql`
             id
             relativePath
             childImageSharp {
-              gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 80, formats: [WEBP])
+              gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 80, formats: [WEBP], height: 300)
             }
           }
         }
