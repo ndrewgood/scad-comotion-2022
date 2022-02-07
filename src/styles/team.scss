@@ -110,7 +110,7 @@
             display: block;
             text-align: center;
             // min-height: 340px;
-            img {
+            .teamImage {
                 width: 175px;
                 border: 12px inset #F3CAFF;
                 margin: auto !important;
@@ -139,7 +139,7 @@
             }
             @media only screen and (min-width: 850px) {
                 &:hover {
-                    img {
+                    .teamImage {
                         border-width: 23px !important;
                         width: 153px;
                     }
