@@ -148,7 +148,7 @@ const TeamPage = (props) => {
         {
             name: "Kaleb Sweeney",
             role: "Co-President",
-            port: "kalebriver.wixsite.com/mysite-1",
+            port: "ksween22.myportfolio.com",
             pic: kaleb,
             color: "blue"
         },
