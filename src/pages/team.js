@@ -509,7 +509,7 @@ const TeamPage = (props) => {
             color: "blue"
         },
         {
-            name: "Tyler Ferrel",
+            name: "Tyler Ferrell",
             role: "",
             port: "mailto:tydeferrell@gmail.com",
             color: "blue"
