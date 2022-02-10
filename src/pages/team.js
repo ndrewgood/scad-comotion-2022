@@ -162,7 +162,7 @@ const TeamPage = (props) => {
         {
             name: "Kaleb Sweeney",
             role: "Co-President",
-            port: "kalebriver.wixsite.com/mysite-1",
+            port: "ksween22.myportfolio.com",
             pic: kaleb,
             color: "blue"
         },
@@ -465,9 +465,9 @@ const TeamPage = (props) => {
             color: "pink"
         },
         {
-            name: "Alywn Tay",
+            name: "Alwyn Tay",
             role: "Sound Design",
-            port: "www.behance.net/wynmp3",
+            port: "vimeo.com/675318785",
             pic: alywn,
             color: "pink"
         },
@@ -523,7 +523,7 @@ const TeamPage = (props) => {
             color: "blue"
         },
         {
-            name: "Tyler Ferrel",
+            name: "Tyler Ferrell",
             role: "",
             port: "mailto:tydeferrell@gmail.com",
             color: "blue"
