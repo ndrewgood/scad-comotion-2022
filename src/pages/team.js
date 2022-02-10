@@ -451,9 +451,9 @@ const TeamPage = (props) => {
             color: "pink"
         },
         {
-            name: "Alywn Tay",
+            name: "Alwyn Tay",
             role: "Sound Design",
-            port: "www.behance.net/wynmp3",
+            port: "https://vimeo.com/675318785",
             pic: alywn,
             color: "pink"
         },
