@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Nav from '../components/nav'
 import MobileNav from '../components/mobileNav'
 import Footer from '../components/footer'
+import Banner from '../components/banner'
 
 import FirstAveMachine from '../assets/images/attendees/1stavemachine.png'
 import AlignedMedia from '../assets/images/attendees/Alignedmedia.png'
@@ -52,6 +54,21 @@ import WeberShandwick from '../assets/images/attendees/webershandwick.png'
 
 import "../styles/attendees.scss"
 
+export const query = graphql`
+  query AttendeesPageQuery {
+    heroImage: allFile(filter: {relativePath: {eq: "banners/heroAttendees.jpg"}}) {
+        edges {
+          node {
+            id
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, formats: [JPG], quality: 100)
+            }
+          }
+        }
+    }
+  }
+`;
+
 const Attendee = props => {
   console.log(props.logo)
   return(
@@ -69,7 +86,12 @@ const Attendee = props => {
 }
 
 
-const AttendeesPage = () => {
+const AttendeesPage = (props) => {
+  const { data, errors } = props;
+
+  let heroImage = data.heroImage.edges[0].node.childImageSharp.gatsbyImageData;
+  console.log(heroImage)
+
   const companies = [
     {
       name: '1stAveMachine',
@@ -293,9 +315,10 @@ const AttendeesPage = () => {
       <Seo title="Attendees - CoMotion 2022" />
       <Nav />
       <MobileNav/>
-      <div className="attendeesHero faqHero-container" >
+      <Banner title="Attendees" imageData={heroImage}/>
+      {/* <div className="attendeesHero faqHero-container" >
         <h1>Attendees</h1>
-      </div>
+      </div> */}
       <main className="attendees">
         <div className="attendeesGrid">
           

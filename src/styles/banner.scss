@@ -1,0 +1,27 @@
+.generalBanner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    position: relative;
+
+    @media only screen and (max-width: 600px) {
+        height: 150px;
+        h1 {
+            font-size: 1.5rem !important;
+        }
+    }
+
+    .bannerImage {
+        height: 100%;
+        position: absolute;
+        object-fit: contain;
+    }
+
+    h1 {
+        margin: 0;
+        position: absolute;
+        font-weight: 600;
+    }
+}
