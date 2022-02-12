@@ -126,7 +126,7 @@ const VolunteerGrid = ({list}) => (
         {
             list.map((i) => {
                 return (
-                    <a href={"https://" + i.port} target="_blank" className="team-volunteer">{i.name}</a>
+                    i.port == null ? <p className="team-volunteer">{i.name}</p> : <a href={"https://" + i.port} target="_blank" className="team-volunteer">{i.name}</a>
                 )
             })
         }
@@ -475,7 +475,6 @@ const TeamPage = (props) => {
         {
             name: "Tucker Ziegler",
             role: "",
-            port: "",
             color: "blue"
         },
         {
@@ -511,7 +510,6 @@ const TeamPage = (props) => {
         {
             name: "Tyler Ferrell",
             role: "",
-            port: "mailto:tydeferrell@gmail.com",
             color: "blue"
         },
         {
@@ -541,7 +539,6 @@ const TeamPage = (props) => {
         {
             name: "Sophia D'Alleva",
             role: "",
-            port: "",
             color: "blue"
         },
         {
@@ -553,7 +550,6 @@ const TeamPage = (props) => {
         {
             name: "Stephanie Sandoval",
             role: "",
-            port: "",
             color: "blue"
         },
         {
@@ -601,7 +597,6 @@ const TeamPage = (props) => {
         {
             name: "Sonyue Li",
             role: "",
-            port: "www.marisarowan.com/",
             color: "blue"
         },
         {
@@ -619,7 +614,6 @@ const TeamPage = (props) => {
         {
             name: "Susanna Tung",
             role: "",
-            port: "",
             color: "blue"
         },
         

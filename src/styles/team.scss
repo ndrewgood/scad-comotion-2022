@@ -181,11 +181,12 @@
             font-family: Cairo, sans-serif;
             color: #291E39;
             font-size: 1.2rem;
-            &:hover {
-                font-weight: 700;
-            }
+            margin-block-start: 0em;
+            margin-block-end: 0em;
         }
-
+        a:hover {
+            font-weight: 700;
+        }
         @media only screen and (max-width: 1200px) {
             width: 80vw;
         }
