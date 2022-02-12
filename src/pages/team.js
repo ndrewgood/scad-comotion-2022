@@ -7,6 +7,7 @@ import Seo from "../components/seo"
 import Nav from '../components/nav'
 import MobileNav from '../components/mobileNav'
 import Footer from '../components/footer'
+import Banner from '../components/banner'
 
 import '../styles/team.scss'
 
@@ -80,6 +81,16 @@ export const query = graphql`
           }
         }
     }
+    heroImage: allFile(filter: {relativePath: {eq: "banners/heroTeam.jpg"}}) {
+        edges {
+          node {
+            id
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, formats: [JPG], quality: 100)
+            }
+          }
+        }
+    }
   }
 `;
 
@@ -106,7 +117,7 @@ const TeamGrid = ({list, photos}) => {
 
                     let color = i.color == "pink" ? "F3CAFF" : i.color == "blue" ? "5ECAED" : i.color == "green" ? "ABEEBB" : "F3CAFF";
                     let profileImage = photos.find(element => element.node.relativePath == i.pic); 
-                    console.log(profileImage)
+                    // console.log(profileImage)
 
                     return (
                         <a href={"https://" + i.port} target="_blank" className="team-picContainer">
@@ -138,11 +149,14 @@ const TeamPage = (props) => {
 
     let momeObject = data.momeLove;
     let momeArray = Object.values(momeObject)[0];
-    console.log(momeArray)
+    // console.log(momeArray)
 
     let brandingObject = data.branding;
     let brandingArray = Object.values(brandingObject)[0];
-    console.log(brandingArray)
+    // console.log(brandingArray)
+
+    let heroImage = data.heroImage.edges[0].node.childImageSharp.gatsbyImageData;
+    console.log(heroImage)
 
     const momeloveList = [
         {
@@ -625,7 +639,8 @@ const TeamPage = (props) => {
             <Seo title="Team - CoMotion 2022" />
             <Nav />
             <MobileNav/>
-            <TeamHero />
+            <Banner title="CoMotion Team" imageData={heroImage}/>
+            {/* <TeamHero /> */}
             <div className="team">
                 <div className="team-container">
                     <TeamHeader text="MOMELove Officers" />

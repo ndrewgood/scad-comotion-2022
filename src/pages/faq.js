@@ -1,12 +1,29 @@
 import React, { useEffect, useState } from "react"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Nav from '../components/nav'
 import MobileNav from '../components/mobileNav'
 import Footer from '../components/footer'
+import Banner from '../components/banner'
 
 import '../styles/faq.scss'
+
+export const query = graphql`
+  query FAQPageQuery {
+    heroImage: allFile(filter: {relativePath: {eq: "banners/heroFAQ.jpg"}}) {
+        edges {
+          node {
+            id
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, formats: [JPG], quality: 100)
+            }
+          }
+        }
+    }
+  }
+`;
 
 const FaqHero = () => (
   <main className="faqHero-container">
@@ -36,12 +53,18 @@ const FaqComponent = ({question, answer}) => {
 }
 
 const FaqPage = (props) => {
+  const { data, errors } = props;
+
+  let heroImage = data.heroImage.edges[0].node.childImageSharp.gatsbyImageData;
+  console.log(heroImage)
+
   return(
     <Layout>
       <Seo title="FAQ - CoMotion 2022" />
       <Nav />
       <MobileNav/>
-      <FaqHero />
+      <Banner title="Frequently Asked Questions" imageData={heroImage}/>
+      {/* <FaqHero /> */}
       <div style={{backgroundColor: "#f4eedd", padding: "40px 0 80px"}}>
         <FaqComponent 
           question="Is CoMotion virtual or on-ground this year and where are livestreams hosted?"

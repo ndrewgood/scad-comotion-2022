@@ -1,12 +1,29 @@
 import React, {useEffect, useState} from "react"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Nav from '../components/nav'
 import MobileNav from '../components/mobileNav'
 import Footer from '../components/footer'
+import Banner from '../components/banner'
 
 import '../styles/panels.scss'
+
+export const query = graphql`
+  query PanelsPageQuery {
+    heroImage: allFile(filter: {relativePath: {eq: "banners/heroPanels.jpg"}}) {
+        edges {
+          node {
+            id
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, formats: [JPG], quality: 100)
+            }
+          }
+        }
+    }
+  }
+`;
 
 const panels = [
   {
@@ -76,12 +93,18 @@ const PanelComponent = ({t, s, d, tm, ds}) => {
 }
 
 const PanelsPage = (props) => {
+  const { data, errors } = props;
+
+  let heroImage = data.heroImage.edges[0].node.childImageSharp.gatsbyImageData;
+  console.log(heroImage)
+
   return (
     <Layout>
       <Seo title="Panels - CoMotion 2022" />
       <Nav />
       <MobileNav/>
-      <PanelsHero />
+      <Banner title="Panels" imageData={heroImage}/>
+      {/* <PanelsHero /> */}
       <div id="panels">
         {/* <div id="keynote">
           <h2>Keynote Speakers</h2>
