@@ -475,12 +475,6 @@ const TeamPage = (props) => {
     
     const volunteerList = [
         {
-            name: "Tanaya Khadke",
-            role: "",
-            port: "www.behance.net/tanayakhadke",
-            color: "blue"
-        },
-        {
             name: "Isabelle Kalyn Winarto",
             role: "",
             port: "byisabellek.com",
@@ -504,12 +498,6 @@ const TeamPage = (props) => {
             color: "blue"
         },
         {
-            name: "Harshitha Suresh",
-            role: "",
-            port: "shadeyartist.com/",
-            color: "blue"
-        },
-        {
             name: "Grace Lawton",
             role: "",
             port: "gracelawtondesign.com",
@@ -524,6 +512,13 @@ const TeamPage = (props) => {
         {
             name: "Tyler Ferrell",
             role: "",
+            port: "www.tydeferrell.com",
+            color: "blue"
+        },
+        {
+            name: "Tanaya Khadke",
+            role: "",
+            port: "www.behance.net/tanayakhadke",
             color: "blue"
         },
         {
@@ -564,6 +559,7 @@ const TeamPage = (props) => {
         {
             name: "Stephanie Sandoval",
             role: "",
+            port: "www.behance.net/stephvsandoval",
             color: "blue"
         },
         {
@@ -576,12 +572,6 @@ const TeamPage = (props) => {
             name: "Ningfeng He",
             role: "",
             port: "feng.squarespace.com",
-            color: "blue"
-        },
-        {
-            name: "Hannah Berastegui",
-            role: "",
-            port: "www.hannahberastegui.com",
             color: "blue"
         },
         {
@@ -600,12 +590,6 @@ const TeamPage = (props) => {
             name: "Hsi Ming Wang (Peter)",
             role: "",
             port: "hsimingwang.myportfolio.com/home",
-            color: "blue"
-        },
-        {
-            name: "Marisa Rowan",
-            role: "",
-            port: "www.marisarowan.com/",
             color: "blue"
         },
         {
@@ -628,6 +612,12 @@ const TeamPage = (props) => {
         {
             name: "Susanna Tung",
             role: "",
+            color: "blue"
+        },
+        {
+            name: "Felipe Ruiz",
+            role: "",
+            port: "www.behance.net/piperuiz",
             color: "blue"
         },
         
