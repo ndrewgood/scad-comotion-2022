@@ -106,7 +106,7 @@ const PanelsPage = (props) => {
       <Banner title="Panels" imageData={heroImage}/>
       {/* <PanelsHero /> */}
       <div id="panels">
-        {/* <div id="keynote">
+        <div id="keynote">
           <h2>Keynote Speakers</h2>
           <div id="speakersContainer">
             <a className="speaker speaker1" target="_blank" href="https://hobbes.work">
@@ -129,7 +129,7 @@ const PanelsPage = (props) => {
             </a>
           </div>
           <p>Eddy Nieto is a director, animator, and designer. Nevin McRay is a producer. Over the past three years, both have helped to lead <a href="https://hobbes.work" target="_blank">Hobbes</a> in applying the principles of motion to emerging technology.</p>
-        </div> */}
+        </div>
         <div>
         {
           panels.map((el, i) => {
