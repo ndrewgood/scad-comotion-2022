@@ -9,12 +9,13 @@
 #panels {
     padding: 40px 0 120px;
     background-color: #F4EEDC;
+    text-align: center;
+    h2 {
+        font-weight: 700;
+        font-size: 1.8rem;
+    }
     #keynote{
-        text-align: center;
-        h2 {
-            font-weight: 700;
-            font-size: 1.8rem;
-        }
+
         #speakersContainer {
             display: flex;
             flex-direction: row;
@@ -172,6 +173,7 @@
         }
         .description {
             font-size: 1.2rem;
+            text-align: left;
         }
         .bt {
             display: none;

@@ -106,6 +106,17 @@ const PanelsPage = (props) => {
       <Banner title="Panels" imageData={heroImage}/>
       {/* <PanelsHero /> */}
       <div id="panels">
+        {/* <div id="livestream">
+          <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/K46_IB73-U8" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div> */}
         <div id="keynote">
           <h2>Keynote Speakers</h2>
           <div id="speakersContainer">
@@ -131,6 +142,7 @@ const PanelsPage = (props) => {
           <p>Eddy Nieto is a director, animator, and designer. Nevin McRay is a producer. Over the past three years, both have helped to lead <a href="https://hobbes.work" target="_blank">Hobbes</a> in applying the principles of motion to emerging technology.</p>
         </div>
         <div>
+        <h2 style={{marginTop: "80px"}}>Panels</h2>
         {
           panels.map((el, i) => {
             return (<PanelComponent key={i} t={el.title} s={el.speakers} d={el.date} tm={el.time} ds={el.description} />)
