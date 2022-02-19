@@ -104,18 +104,33 @@ const PanelsPage = (props) => {
       <Nav />
       <MobileNav/>
       <Banner title="Panels" imageData={heroImage}/>
-      {/* <PanelsHero /> */}
       <div id="panels">
+        {/* Day 1: https://www.youtube.com/embed/YxRRjm8vZQ8  */}
+        {/* Day 2: https://www.youtube.com/embed/rGRJ7SiYRx8  */}
+        {/* Day 3: https://www.youtube.com/embed/yE50RHSU5Mw  */}
         {/* <div id="livestream">
+          <h2>CoMotion Livestream: Day #</h2>
           <iframe 
             width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/K46_IB73-U8" 
+            height="700" 
+            src="https://www.youtube.com/embed/YxRRjm8vZQ8" 
             title="YouTube video player" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
           </iframe>
+          <h4>Livestreams</h4>
+          <div className="buttonGrid">
+            <a className="pink" href="https://youtu.be/YxRRjm8vZQ8" target="_blank"><p>Day 1 Livestream</p></a>
+            <a className="pink" href="https://youtu.be/rGRJ7SiYRx8" target="_blank"><p>Day 2 Livestream</p></a>
+            <a className="pink" href="https://youtu.be/yE50RHSU5Mw" target="_blank"><p>Day 3 Livestream</p></a>
+          </div>
+          <h4>Live YouTube Premieres</h4>
+          <div className="buttonGrid">
+            <a className="blue" href="/" target="_blank"><p>Opening Statement and Title Sequence</p></a>
+            <a className="blue" href="/" target="_blank"><p>Student Showcase: Nominees</p></a>
+            <a className="blue" href="/" target="_blank"><p>Student Showcase: Winners</p></a>
+          </div>
         </div> */}
         <div id="keynote">
           <h2>Keynote Speakers</h2>
