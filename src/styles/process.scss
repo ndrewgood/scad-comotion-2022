@@ -1,0 +1,149 @@
+.processNav {
+    position: sticky;
+    z-index: 100;
+    top: 80px;
+    height: 60px;
+    background-color: #EFE8D2;
+    width: 100%;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+
+        a {
+            text-decoration: none;
+            color: #291f39;
+            transition: all 300ms ease-in-out;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                color: #FF8937;
+                transition: all 300ms ease-in-out;
+            }
+        }
+
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+.process {
+    padding: 40px 0;
+    background: #291E39;
+    color: #f4eedd;
+
+    h3 {
+        font-size: 32px;
+        margin: 24px 0 24px
+    }
+
+    h4 {
+        font-size: 24px;
+        margin: 24px 0 8px
+    }
+
+    p {
+        max-width: 800px;
+        font-size: 18px;
+    }
+
+    .processContainer {
+        max-width: 1200px;
+        padding: 0 2vw;
+        margin: 0 auto;
+
+        .processSection {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        iframe {
+            margin: 0 auto;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .two-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            width: 100%;
+        }
+
+        .three-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            width: 100%;
+        }
+
+        .four-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            width: 100%;
+        }
+
+        .hoverImage {
+            padding-top: 50%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            img {
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .onHoverImage {
+                opacity: 0;
+                transition: all 400ms ease-in-out;
+            }
+
+            &:hover {
+                .onHoverImage {
+                    opacity: 1;
+                    transition: all 400ms ease-in-out;
+                }
+            }
+        }
+
+        .odd-one-out {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+
+            .lastImage {
+                width: calc(50% - 8px)
+            }
+        }
+
+        .titleCard {
+            margin-bottom: 48px;
+        }
+
+        .centerImage {
+            width: 50%;
+        }
+    }
+}

@@ -6,6 +6,7 @@
   "author": "Andrew Goodridge <hey@ndrewgood.com>, Varun Kharti <varunmk05@gmail.com>",
   "dependencies": {
     "gatsby": "^4.2.0",
+    "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-gatsby-cloud": "^4.2.0",
     "gatsby-plugin-image": "^2.2.0",
     "gatsby-plugin-manifest": "^4.2.0",
