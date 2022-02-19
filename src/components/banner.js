@@ -4,12 +4,12 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 import '../styles/banner.scss'
 
-const Banner = ({imageData, title}) => {
+const Banner = ({imageData, title, specificClass}) => {
 
 
 
     return (
-        <div className="generalBanner">
+        <div className={specificClass ? "generalBanner " + specificClass : "generalBanner"}>
             <GatsbyImage image={imageData} alt={title} className="bannerImage"/>
             <h1>{title}</h1>
         </div>
