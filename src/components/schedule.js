@@ -35,7 +35,7 @@ const Day1 = () => {
         <ScheduleSlide
             className="day1"
             items={[
-                {title: "Opening Statement", time: "10:00 am - 11:15 am"},
+                {title: "Opening Statement", time: "11:00 am - 11:15 am"},
                 {title: "Title Sequence", time: "11:15 am - 11:30 am"},
                 {title: "Keynote", time: "11:30 am - 12:30 pm"},
                 {title: "Lunch Break", time: "12:30 pm - 1:30 pm"},
