@@ -59,14 +59,35 @@
             font-size: 1.3rem;
             text-decoration: none;
             transition: all 250ms ease-in-out;
+            &.disable {
+                transform: scale(0.9);
+                opacity: 0.5;
+            }
            &:hover {
             height: 86px;
+            &.disable {
+                height: 100px;
+                cursor: not-allowed;
+            }
             &.pink {
                 border: outset 22px #DC9AF0;
+                &.disable {
+                    border: outset 15px #DC9AF0;
+                    p {
+                        transform: translate(-50%, -50%);
+                    }
+                }
             }
             &.blue {
                 border: outset 22px #45b2d6;
+                &.disable {
+                    border: outset 15px #45b2d6;
+                    p {
+                        transform: translate(-50%, -50%);
+                    }
+                }
             }
+            
             p {
                 transform: translate(-50%, -50%) scale(0.9);
             }
@@ -199,6 +220,7 @@
                     line-height: 2rem;
                     margin-top: 8px;
                     padding-right: 15px;
+                    text-align: left;
                     color: #291E39;
                 }
                 .time {

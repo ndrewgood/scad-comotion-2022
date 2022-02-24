@@ -63,11 +63,11 @@ const Nav = ({context}) => {
                         <div className="box__face box__face--bottom"></div>
                     </Link>
                     <Link className="box bring-front pattern-3" to="/panels">
-                        <div className="box__face box__face--front">Panels</div>
+                        <div className="box__face box__face--front">Livestream</div>
                         <div className="box__face box__face--back"></div>
                         <div className="box__face box__face--right"></div>
                         <div className="box__face box__face--left"></div>
-                        <div className="box__face box__face--top">Panels</div>
+                        <div className="box__face box__face--top">Livestream</div>
                         <div className="box__face box__face--bottom"></div>
                     </Link>
                     <Link className="box bring-front pattern-1" to="/faq">
