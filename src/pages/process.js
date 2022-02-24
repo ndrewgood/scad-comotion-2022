@@ -170,6 +170,21 @@ const ProcessPage = (props) => {
           </div>
           <div id="broadcastpackage" className="processSection">
             <ProcessBanner title="Broadcast Package"/>
+            <h4>Zoom Background Image</h4>
+            <img className="centerImage" src={exampleImage}/>
+            <h4>Stream Mortises and Pre Livestream Background</h4>
+            <div className="odd-one-out">
+              <img src={exampleImage2} className="lastImage"/>
+              <div className="two-grid"> 
+                <img src={exampleImage}/>
+                <img src={exampleImage2}/>
+              </div>
+            </div>
+            <h4>Winner and Nominee Title Cards</h4>
+            <div className="two-grid">
+              <img src={exampleImage2}/>
+              <img src={exampleImage}/>
+            </div>
           </div>
           <div id="webdesign" className="processSection">
             <ProcessBanner title="Web Design"/>

@@ -62,7 +62,7 @@ const Nav = ({context}) => {
                         <div className="box__face box__face--top">Attendees</div>
                         <div className="box__face box__face--bottom"></div>
                     </Link>
-                    <Link className="box bring-front pattern-3" to="/panels">
+                    <Link className="box bring-front pattern-3" to="/livestream">
                         <div className="box__face box__face--front">Livestream</div>
                         <div className="box__face box__face--back"></div>
                         <div className="box__face box__face--right"></div>

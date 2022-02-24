@@ -134,7 +134,7 @@ const PanelsPage = (props) => {
 
   return (
     <Layout>
-      <Seo title="Panels - CoMotion 2022" />
+      <Seo title="Livestream and Panels - CoMotion 2022" />
       <Nav />
       <MobileNav/>
       <Banner title="Livestream and Panels" imageData={heroImage}/>
