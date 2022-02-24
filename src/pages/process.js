@@ -16,6 +16,61 @@ import '../styles/process.scss'
 
 export const query = graphql`
   query ProcessPageQuery {
+    processTitle: allFile(filter: {relativePath: {regex: "/^process/title/"}}) {
+      edges {
+        node {
+          id
+          relativePath
+          childImageSharp {
+            gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 80, formats: [WEBP], height: 300)
+          }
+        }
+      }
+    }
+    processDesign: allFile(filter: {relativePath: {regex: "/^process/design/"}}) {
+      edges {
+        node {
+          id
+          relativePath
+          childImageSharp {
+            gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 80, formats: [WEBP], height: 300)
+          }
+        }
+      }
+    }
+    processDeliverables: allFile(filter: {relativePath: {regex: "/^process/deliverables/"}}) {
+      edges {
+        node {
+          id
+          relativePath
+          childImageSharp {
+            gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 80, formats: [WEBP], height: 300)
+          }
+        }
+      }
+    }
+    processWeb: allFile(filter: {relativePath: {regex: "/^process/web/"}}) {
+      edges {
+        node {
+          id
+          relativePath
+          childImageSharp {
+            gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 80, formats: [WEBP], height: 300)
+          }
+        }
+      }
+    }
+    processBroadcast: allFile(filter: {relativePath: {regex: "/^process/broadcast/"}}) {
+      edges {
+        node {
+          id
+          relativePath
+          childImageSharp {
+            gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 80, formats: [WEBP], height: 300)
+          }
+        }
+      }
+    }
     heroImage: allFile(filter: {relativePath: {eq: "banners/heroFAQ.jpg"}}) {
         edges {
           node {
@@ -75,6 +130,18 @@ const ProcessPage = (props) => {
 
   let heroImage = data.heroImage.edges[0].node.childImageSharp.gatsbyImageData;
   console.log(heroImage)
+
+  let titleImages = data.processTitle.edges;
+  let designImages = data.processDesign.edges;
+  let deliverablesImages = data.processDeliverables.edges;
+  let broadcastImages = data.processBroadcast.edges;
+  let webImages = data.processWeb.edges;
+
+  console.log(titleImages);
+  console.log(designImages);
+  console.log(deliverablesImages);
+  console.log(broadcastImages);
+  console.log(webImages);
 
   return(
     <Layout>
