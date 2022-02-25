@@ -28,6 +28,8 @@ export const query = graphql`
 
 const openingStatementTime = moment.unix(1645794000);
 const day1launchTime = moment.unix(1645805400);
+const studentPanelTime = moment.unix(1645813500);
+const day1launchTime2 = moment.unix(1645818000);
 const day2launchTime = moment.unix(1645855200);
 const day3launchTime = moment.unix(1645941600);
 const testTime = moment.unix(1645659600);
@@ -126,7 +128,14 @@ const PanelsPage = (props) => {
       setYoutubeSrc("https://www.youtube.com/embed/YxRRjm8vZQ8");
       setDayNumber("1");
     }
-  
+    if(timeNow >= (studentPanelTime/1000)) {
+      setYoutubeSrc("https://www.youtube.com/embed/r4ScU7EQkeE");
+      setDayNumber("1");
+    }
+    if(timeNow >= (day1launchTime2/1000)) {
+      setYoutubeSrc("https://www.youtube.com/embed/YxRRjm8vZQ8");
+      setDayNumber("1");
+    }
     if(timeNow >= (day2launchTime/1000)) {
       setYoutubeSrc("https://www.youtube.com/embed/rGRJ7SiYRx8");
       setDayNumber("2");
