@@ -195,7 +195,7 @@ const DesignSection = ({designImages}) => {
         <GatsbyHoverImage initial="process/design/type-study/2.png" hover="process/design/type-study/3.png" photos={designImages}/>
         <GatsbyHoverImage initial="process/design/type-study/2.png" hover="process/design/type-study/3.png" photos={designImages}/>
       </div>
-      <iframe width="670" height="377" src="https://www.youtube.com/embed/NQv6MuHlaCY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe title="vimeo-player" src="https://player.vimeo.com/video/680856919?h=aa02ad04c3" width="640" height="360" frameborder="0" allowfullscreen></iframe>
       <h4>Logo Animation Process</h4>
       <div className="three-grid">
         <GatsbyHoverImage initial="process/design/type-study/2.png" hover="process/design/type-study/3.png" photos={designImages}/>
