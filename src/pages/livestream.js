@@ -26,7 +26,8 @@ export const query = graphql`
   }
 `;
 
-const day1launchTime = moment.unix(1645682400);
+const openingStatementTime = moment.unix(1645794000);
+const day1launchTime = moment.unix(1645805400);
 const day2launchTime = moment.unix(1645855200);
 const day3launchTime = moment.unix(1645941600);
 const testTime = moment.unix(1645659600);
@@ -110,11 +111,17 @@ const PanelsPage = (props) => {
   const [timeNow, setTimeNow] = useState(moment().unix());
   const [youtubeSrc, setYoutubeSrc] = useState("https://www.youtube.com/embed/YxRRjm8vZQ8");
   const [dayNumber, setDayNumber] = useState("1");
-  console.log((day1launchTime/1000));
-  console.log((day2launchTime/1000));
-  console.log((day3launchTime/1000));
+  console.log("openState: " + (openingStatementTime/1000));
+  console.log("day1: " + (day1launchTime/1000));
+  console.log("day2: " + (day2launchTime/1000));
+  console.log("day3: " + (day3launchTime/1000));
+  console.log(timeNow >= (testTime/1000));
 
   useEffect(() => {  
+    if(timeNow >= (openingStatementTime/1000)){
+      setYoutubeSrc("https://www.youtube.com/embed/B4YMI3SwAf4");
+      setDayNumber("1");
+    }
     if(timeNow >= (day1launchTime/1000)) {
       setYoutubeSrc("https://www.youtube.com/embed/YxRRjm8vZQ8");
       setDayNumber("1");
@@ -161,7 +168,7 @@ const PanelsPage = (props) => {
           </div>
           <h4>Live YouTube Premieres</h4>
           <div className="buttonGrid">
-            <a className="blue disable" target="_blank"><p>Opening Statement and Title Sequence</p></a>
+            <a className="blue" href="https://www.youtube.com/watch?v=B4YMI3SwAf4" target="_blank"><p>Opening Statement and Title Sequence</p></a>
             <a className="blue disable" target="_blank"><p>Student Showcase: Nominees</p></a>
             <a className="blue disable" target="_blank"><p>Student Showcase: Winners</p></a>
           </div>
