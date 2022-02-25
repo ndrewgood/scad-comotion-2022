@@ -13,6 +13,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 import exampleImage from '../assets/images/nav/navbg1.png'
 import exampleImage2 from '../assets/images/nav/navbg2.png'
+import sympImg from '../assets/images/process/symp.png'
 
 import '../styles/process.scss'
 
@@ -305,6 +306,14 @@ const ProcessPage = (props) => {
         <div className="processContainer">
           <div className="welcome processSection">
             <p>Welcome to the process page for CoMotion 2022! As you scroll through this page you’ll find information showcasing the creation process for all deliverables made by the CoMotion branding team.  We are proud of all the hard work and determination that went into this event. We hope you enjoy this behind the scenes look at CoMotion 2022! -CoMotion 2022 Documentary Team</p>
+          </div>
+          <div className="processSection symposium">
+            <img src={sympImg} alt="" srcset="" />
+            <div className="sympContent">
+              <h3>CoMotion 2022 Edited Symposium</h3>
+              <p>Editors: Kagan Marks, Scott Sandifer</p>
+              <a target="_blank" href="https://drive.google.com/file/d/1w-N-91809dD4ei9Z0-UMHyWZWhUur8hn/view?usp=sharing">Click here to view the CoMotion 2022 Symposium</a>
+            </div>
           </div>
           <TitleSection titleImages={titleImages}/>
           <DesignSection designImages={designImages}/>
