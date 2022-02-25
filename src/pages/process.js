@@ -150,14 +150,14 @@ const TitleSection = ({titleImages}) => {
       <p>We centered our design around the idea of 2.5 dimensional space. This design language embodies the essence of motion graphics through its fluid and flexible nature. Within this boundless space, we were able to reflect upon our innovative and experimental field that keeps pushing us to evolve. Join us to embrace and celebrate the limitless possibilities of what we can achieve with motion media.</p>
       <h4>Style Frames</h4>
       <div className="four-grid">
-        <GatsbyHoverImage initial="process/title/concept/comotion2022-1-3.jpg" hover="process/title/concept/comotion2022-1-2.jpg" photos={titleImages}/>
-        <GatsbyHoverImage initial="process/title/concept/comotion2022-1-1.jpg" hover="process/title/concept/comotion2022-1-2.jpg" photos={titleImages}/>
-        <GatsbyHoverImage initial="process/title/concept/comotion2022-1-1.jpg" hover="process/title/concept/comotion2022-1-2.jpg" photos={titleImages}/>
-        <GatsbyHoverImage initial="process/title/concept/comotion2022-1-1.jpg" hover="process/title/concept/comotion2022-1-2.jpg" photos={titleImages}/>
-        <GatsbyHoverImage initial="process/title/concept/comotion2022-1-1.jpg" hover="process/title/concept/comotion2022-1-2.jpg" photos={titleImages}/>
-        <GatsbyHoverImage initial="process/title/concept/comotion2022-1-1.jpg" hover="process/title/concept/comotion2022-1-2.jpg" photos={titleImages}/>
-        <GatsbyHoverImage initial="process/title/concept/comotion2022-1-1.jpg" hover="process/title/concept/comotion2022-1-2.jpg" photos={titleImages}/>
-        <GatsbyHoverImage initial="process/title/concept/comotion2022-1-1.jpg" hover="process/title/concept/comotion2022-1-2.jpg" photos={titleImages}/>
+        <GatsbyHoverImage initial="process/title/concept/1-1.jpg" hover="process/title/concept/1-2.jpg" photos={titleImages}/>
+        <GatsbyHoverImage initial="process/title/concept/1-1.jpg" hover="process/title/concept/1-2.jpg" photos={titleImages}/>
+        <GatsbyHoverImage initial="process/title/concept/1-1.jpg" hover="process/title/concept/1-2.jpg" photos={titleImages}/>
+        <GatsbyHoverImage initial="process/title/concept/1-1.jpg" hover="process/title/concept/1-2.jpg" photos={titleImages}/>
+        <GatsbyHoverImage initial="process/title/concept/1-1.jpg" hover="process/title/concept/1-2.jpg" photos={titleImages}/>
+        <GatsbyHoverImage initial="process/title/concept/1-1.jpg" hover="process/title/concept/1-2.jpg" photos={titleImages}/>
+        <GatsbyHoverImage initial="process/title/concept/1-1.jpg" hover="process/title/concept/1-2.jpg" photos={titleImages}/>
+        <GatsbyHoverImage initial="process/title/concept/1-1.jpg" hover="process/title/concept/1-2.jpg" photos={titleImages}/>
       </div>
     </div>
   )
@@ -173,12 +173,12 @@ const DesignSection = ({designImages}) => {
     <div id="designprocess" className="processSection">
       <ProcessBanner title="Design Process"/>
       <div className="three-grid">
-        <img src={exampleImage2}/>
-        <img src={exampleImage2}/>
-        <img src={exampleImage2}/>
-        <img src={exampleImage2}/>
-        <img src={exampleImage2}/>
-        <img src={exampleImage2}/>
+        <GatsbyImage image={typeStudy1.node.childImageSharp.gatsbyImageData}/>
+        <GatsbyImage image={typeStudy2.node.childImageSharp.gatsbyImageData}/>
+        <GatsbyImage image={typeStudy1.node.childImageSharp.gatsbyImageData}/>
+        <GatsbyImage image={typeStudy2.node.childImageSharp.gatsbyImageData}/>
+        <GatsbyImage image={typeStudy1.node.childImageSharp.gatsbyImageData}/>
+        <GatsbyImage image={typeStudy2.node.childImageSharp.gatsbyImageData}/>
       </div>
       <h4>Type Studies</h4>
       <div className="odd-one-out">
