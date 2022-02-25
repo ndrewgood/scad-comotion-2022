@@ -105,6 +105,7 @@
 
         iframe {
             margin: 0 auto;
+            max-width: 85vw;
         }
 
         img {
@@ -174,8 +175,24 @@
             margin-bottom: 48px;
         }
 
+        .tallImageGrid1 {
+            max-width: 800px !important;
+        }
+
+        .tallImageGrid2 {
+            max-width: 900px !important;
+        }
+
         .centerImage {
             width: 50%;
+        }
+        @media only screen and (max-width: 900px) {
+            .three-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hoverImage {
+                margin: auto;
+            }
         }
     }
 }
