@@ -200,8 +200,8 @@ nav {
 .box__face--right { transform: rotateY( 90deg) translateZ(60px); }
 .box__face--left  { transform: rotateY(-90deg) translateZ(60px); }
 
-.rightWall { transform: rotateY( 90deg) translateZ(360px); }
-.leftWall  { transform: rotateY(-90deg) translateZ(360px); }
+.rightWall { transform: rotateY( 90deg) translateZ(420px); }
+.leftWall  { transform: rotateY(-90deg) translateZ(420px); }
 
 .box__face--top    { transform: rotateX( 90deg) translateZ(40px); }
 .box__face--bottom { transform: rotateX(-90deg) translateZ(40px); }
