@@ -119,7 +119,7 @@ const PanelsPage = (props) => {
 
   useEffect(() => {  
     if(timeNow >= (openingStatementTime/1000)){
-      setYoutubeSrc("https://www.youtube.com/embed/B4YMI3SwAf4");
+      setYoutubeSrc("https://www.youtube.com/embed/L657e0W_k8Q");
       setDayNumber("1");
     }
     if(timeNow >= (day1launchTime/1000)) {
@@ -168,8 +168,8 @@ const PanelsPage = (props) => {
           </div>
           <h4>Live YouTube Premieres</h4>
           <div className="buttonGrid">
-            <a className="blue" href="https://www.youtube.com/watch?v=B4YMI3SwAf4" target="_blank"><p>Opening Statement and Title Sequence</p></a>
-            <a className="blue disable" target="_blank"><p>Student Showcase: Nominees</p></a>
+            <a className="blue" href="https://www.youtube.com/watch?v=L657e0W_k8Q" target="_blank"><p>Opening Statement and Title Sequence</p></a>
+            <a className="blue" href="https://youtu.be/r4ScU7EQkeE" target="_blank"><p>Student Showcase: Nominees</p></a>
             <a className="blue disable" target="_blank"><p>Student Showcase: Winners</p></a>
           </div>
         </div>
