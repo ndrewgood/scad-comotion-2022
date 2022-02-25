@@ -27,7 +27,7 @@ export const query = graphql`
           id
           relativePath
           childImageSharp {
-            gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 80, formats: [WEBP], height: 400)
+            gatsbyImageData(placeholder: BLURRED, quality: 70, formats: [WEBP], height: 400)
           }
         }
       }
@@ -38,7 +38,7 @@ export const query = graphql`
           id
           relativePath
           childImageSharp {
-            gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 80, formats: [WEBP], height: 400)
+            gatsbyImageData(placeholder: BLURRED, quality: 70, formats: [WEBP], height: 400)
           }
         }
       }
@@ -49,7 +49,7 @@ export const query = graphql`
           id
           relativePath
           childImageSharp {
-            gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 90, formats: [WEBP], height: 600)
+            gatsbyImageData(placeholder: BLURRED, quality: 70, formats: [WEBP], height: 600)
           }
         }
       }
@@ -60,7 +60,7 @@ export const query = graphql`
           id
           relativePath
           childImageSharp {
-            gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 90, formats: [WEBP], height: 600)
+            gatsbyImageData(placeholder: BLURRED, quality: 70, formats: [WEBP], height: 600)
           }
         }
       }
@@ -71,7 +71,7 @@ export const query = graphql`
           id
           relativePath
           childImageSharp {
-            gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 90, formats: [WEBP], height: 600)
+            gatsbyImageData(placeholder: BLURRED, quality: 70, formats: [WEBP], height: 600)
           }
         }
       }
