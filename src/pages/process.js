@@ -25,7 +25,7 @@ export const query = graphql`
           id
           relativePath
           childImageSharp {
-            gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 80, formats: [WEBP])
+            gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 90, formats: [WEBP], height: 600)
           }
         }
       }
@@ -36,7 +36,7 @@ export const query = graphql`
           id
           relativePath
           childImageSharp {
-            gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 80, formats: [WEBP])
+            gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 90, formats: [WEBP], height: 600)
           }
         }
       }
@@ -47,7 +47,7 @@ export const query = graphql`
           id
           relativePath
           childImageSharp {
-            gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 80, formats: [WEBP])
+            gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 90, formats: [WEBP], height: 600)
           }
         }
       }
@@ -58,7 +58,7 @@ export const query = graphql`
           id
           relativePath
           childImageSharp {
-            gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 80, formats: [WEBP])
+            gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 90, formats: [WEBP], height: 600)
           }
         }
       }
@@ -69,7 +69,7 @@ export const query = graphql`
           id
           relativePath
           childImageSharp {
-            gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 80, formats: [WEBP])
+            gatsbyImageData(placeholder: DOMINANT_COLOR, quality: 90, formats: [WEBP], height: 600)
           }
         }
       }
@@ -220,7 +220,7 @@ const DeliverableSection = ({deliverablesImages}) => {
           <GatsbyImage image={placeholder.node.childImageSharp.gatsbyImageData}/>
           <GatsbyImage image={placeholder.node.childImageSharp.gatsbyImageData}/>
         </div>
-        <GatsbyImage image={placeholder.node.childImageSharp.gatsbyImageData}/>
+        <GatsbyImage image={placeholder.node.childImageSharp.gatsbyImageData} className="lastImage"/>
         <div className="two-grid">
           <GatsbyImage image={placeholder.node.childImageSharp.gatsbyImageData}/>
           <GatsbyImage image={placeholder.node.childImageSharp.gatsbyImageData}/>
