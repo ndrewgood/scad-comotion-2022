@@ -269,7 +269,7 @@ const DeliverableSection = ({deliverablesImages}) => {
 }
 
 const BroadcastSection = ({broadcastImages}) => {
-  const zoomBgImg = broadcastImages.find(element => element.node.relativePath == "process/broadcast/zoom/1.png"); 
+  const zoomBgImg = broadcastImages.find(element => element.node.relativePath == "process/broadcast/zoom/one.png"); 
 
   const lsMort1 = broadcastImages.find(element => element.node.relativePath == "process/broadcast/livestream-mortises/1.jpg"); 
   const lsMort2 = broadcastImages.find(element => element.node.relativePath == "process/broadcast/livestream-mortises/2.jpg"); 
@@ -330,7 +330,7 @@ const ProcessPage = (props) => {
 
   return(
     <Layout>
-      <Seo title="FAQ - CoMotion 2022" />
+      <Seo title="Process - CoMotion 2022" />
       <Nav />
       <MobileNav/>
       <Banner title="Process Page" imageData={heroImage} specificClass="processBanner"/>
