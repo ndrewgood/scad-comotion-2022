@@ -86,7 +86,15 @@ const Nav = ({context}) => {
                         <div className="box__face box__face--top">Team</div>
                         <div className="box__face box__face--bottom"></div>
                     </Link>
-                    <a className="box bring-back pattern-3" href="https://society6.com/momelove">
+                    <Link className="box bring-back pattern-3" to="/process">
+                        <div className="box__face box__face--front">Process</div>
+                        <div className="box__face box__face--back"></div>
+                        <div className="box__face box__face--right"></div>
+                        <div className="box__face box__face--left"></div>
+                        <div className="box__face box__face--top">Process</div>
+                        <div className="box__face box__face--bottom"></div>
+                    </Link>
+                    <a className="box bring-full-back pattern-1" href="https://society6.com/momelove">
                         <div className="box__face box__face--front">Store</div>
                         <div className="box__face box__face--back"></div>
                         <div className="box__face box__face--right"></div>

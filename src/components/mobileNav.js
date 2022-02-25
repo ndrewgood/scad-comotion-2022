@@ -62,7 +62,8 @@ const MobileNav = ({context}) => {
                         <Link to="/livestream"><li className='third'>Livestream</li></Link>
                         <Link to="/faq"><li className='fourth'>FAQ</li></Link>
                         <Link to="/team"><li className='first'>Team</li></Link>
-                        <a href="https://society6.com/momelove"><li className='second'>Store</li></a>
+                        {/* <Link to="/process"><li className='second'>Process</li></Link> */}
+                        <a href="https://society6.com/momelove"><li className='third'>Store</li></a>
                     </ul>
                 )}
             </Transition>   
