@@ -145,7 +145,7 @@ const TitleSection = ({titleImages}) => {
   return (
     <div id="titlesequence" className="processSection">
       <ProcessBanner title="Title Sequence"/>
-      <iframe width="670" height="377" src="https://www.youtube.com/embed/NQv6MuHlaCY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="670" height="377" src="https://www.youtube.com/embed/L657e0W_k8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <p>We centered our design around the idea of 2.5 dimensional space. This design language embodies the essence of motion graphics through its fluid and flexible nature. Within this boundless space, we were able to reflect upon our innovative and experimental field that keeps pushing us to evolve. Join us to embrace and celebrate the limitless possibilities of what we can achieve with motion media.</p>
       <h4>Style Frames</h4>
       <div className="three-grid">

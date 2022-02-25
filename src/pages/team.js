@@ -169,7 +169,7 @@ const TeamPage = (props) => {
         {
             name: "Alexandera Marca",
             role: "Co-President",
-            port: "",
+            port: "www.callmealex.design/",
             pic: alex,
             color: "blue"
         },
