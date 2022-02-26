@@ -149,16 +149,16 @@ const TitleSection = ({titleImages}) => {
       <p>We centered our design around the idea of 2.5 dimensional space. This design language embodies the essence of motion graphics through its fluid and flexible nature. Within this boundless space, we were able to reflect upon our innovative and experimental field that keeps pushing us to evolve. Join us to embrace and celebrate the limitless possibilities of what we can achieve with motion media.</p>
       <h4>Style Frames</h4>
       <div className="three-grid">
-        <GatsbyHoverImage initial="process/title/final/5.png" hover="process/title/concept/2-1.jpg" photos={titleImages}/>
-        <GatsbyHoverImage initial="process/title/final/8.png" hover="process/title/concept/2-2.jpg" photos={titleImages}/>
-        <GatsbyHoverImage initial="process/title/final/11.png" hover="process/title/concept/2-3.jpg" photos={titleImages}/>
-        <GatsbyHoverImage initial="process/title/final/14.png" hover="process/title/concept/3-1.jpg" photos={titleImages}/>
-        <GatsbyHoverImage initial="process/title/final/16.jpg" hover="process/title/concept/3-2.jpg" photos={titleImages}/>
-        <GatsbyHoverImage initial="process/title/final/17.png" hover="process/title/concept/3-3.jpg" photos={titleImages}/>
-        <GatsbyHoverImage initial="process/title/final/18.png" hover="process/title/concept/3-4.jpg" photos={titleImages}/>
-        <GatsbyHoverImage initial="process/title/final/19.png" hover="process/title/concept/3-5.jpg" photos={titleImages}/>
+        <GatsbyHoverImage initial="process/title/final/5.png"   hover="process/title/concept/2-1.jpg" photos={titleImages}/>
+        <GatsbyHoverImage initial="process/title/final/8.png"   hover="process/title/concept/2-2.jpg" photos={titleImages}/>
+        <GatsbyHoverImage initial="process/title/final/11.png"  hover="process/title/concept/2-3.jpg" photos={titleImages}/>
+        <GatsbyHoverImage initial="process/title/final/14.png"  hover="process/title/concept/3-1.jpg" photos={titleImages}/>
+        <GatsbyHoverImage initial="process/title/final/16.jpg"  hover="process/title/concept/3-2.jpg" photos={titleImages}/>
+        <GatsbyHoverImage initial="process/title/final/17.png"  hover="process/title/concept/3-3.jpg" photos={titleImages}/>
+        <GatsbyHoverImage initial="process/title/final/18.png"  hover="process/title/concept/3-4.jpg" photos={titleImages}/>
+        <GatsbyHoverImage initial="process/title/final/19.png"  hover="process/title/concept/3-5.jpg" photos={titleImages}/>
         <GatsbyHoverImage initial="process/title/final/24.jpeg" hover="process/title/concept/3-8.jpg" photos={titleImages}/>
-        <GatsbyHoverImage initial="process/title/final/27.png" hover="process/title/concept/4-2.jpg" photos={titleImages}/>
+        <GatsbyHoverImage initial="process/title/final/27.png"  hover="process/title/concept/4-2.jpg" photos={titleImages}/>
 
       </div>
     </div>

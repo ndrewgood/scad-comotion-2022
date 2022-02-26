@@ -22,7 +22,11 @@ $tan: #F4EEDD;
 body {
     margin: 0;
     font-family: omnes-pro, sans-serif;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+}
+
+main {
+    overflow-x: hidden !important;
 }
 
 * {
