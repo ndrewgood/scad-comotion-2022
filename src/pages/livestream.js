@@ -32,6 +32,9 @@ const studentPanelTime = moment.unix(1645813500);
 const day1launchTime2 = moment.unix(1645818000);
 const day2launchTime = moment.unix(1645855200);
 const day3launchTime = moment.unix(1645941600);
+const awardsTime = moment.unix(1645992900); // 3:15PM EST
+const postAwardsTime = moment.unix(1645999200); // 5PM EST
+
 const testTime = moment.unix(1645659600);
 
 const panels = [
@@ -117,6 +120,7 @@ const PanelsPage = (props) => {
   console.log("day1: " + (day1launchTime/1000));
   console.log("day2: " + (day2launchTime/1000));
   console.log("day3: " + (day3launchTime/1000));
+  console.log("Ready for Awards: " + (awardsTime/1000));
   console.log(timeNow >= (testTime/1000));
 
   useEffect(() => {  
@@ -145,6 +149,16 @@ const PanelsPage = (props) => {
       setYoutubeSrc("https://www.youtube.com/embed/yE50RHSU5Mw");
       setDayNumber("3");
     }
+
+    if(timeNow >= (awardsTime/1000)) {
+      setYoutubeSrc("https://www.youtube.com/embed/vSwkWU9_JS8");
+      setDayNumber("3");
+    }
+
+    // if(timeNow >= (postAwardsTime/1000)) {
+    //   setYoutubeSrc("https://www.youtube.com/embed/vSwkWU9_JS8");
+    //   setDayNumber("3");
+    // }
   });
 
 
@@ -179,7 +193,7 @@ const PanelsPage = (props) => {
           <div className="buttonGrid">
             <a className="blue" href="https://www.youtube.com/watch?v=L657e0W_k8Q" target="_blank"><p>Opening Statement and Title Sequence</p></a>
             <a className="blue" href="https://youtu.be/r4ScU7EQkeE" target="_blank"><p>Student Showcase: Nominees</p></a>
-            <a className="blue disable" target="_blank"><p>Student Showcase: Winners</p></a>
+            <a className="blue" href="https://youtu.be/vSwkWU9_JS8" target="_blank"><p>Student Showcase: Winners</p></a>
           </div>
         </div>
         <div id="keynote">
